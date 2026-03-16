@@ -1,7 +1,8 @@
 <?php
-require_once 'assets/functions/photo.uploads.php';
 require_once 'assets/includes/display_errors.php';
 require_once 'assets/config/db.php';
+require_once 'assets/functions/photo.uploads.php';
+require_once 'assets/functions/photo.resize.php';
 ?>
 
 <!DOCTYPE html>
@@ -15,6 +16,8 @@ require_once 'assets/config/db.php';
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- Jcrop css -->
+    <link rel="stylesheet" href="assets/css/jcrop.min.css">
     <!-- Custom styles -->
     <link rel="stylesheet" href="assets/css/style.css">
 
