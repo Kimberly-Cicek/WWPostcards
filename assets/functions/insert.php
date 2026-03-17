@@ -1,6 +1,11 @@
 <?php
 
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 if (isset($_POST['create_postcard'])) {
+    $user_id = $_SESSION['user_id'];
+
     $title = trim($_POST['title']);
     $message = trim($_POST['message']);
     $continent = trim($_POST['continent']);
@@ -14,6 +19,7 @@ if (isset($_POST['create_postcard'])) {
         empty($country) ||
         empty($city)
     ) {
+        echo '<div class="container mt-3"><div class="alert alert-danger">Alla fält måste fyllas i.</div></div>';
     } elseif (!isset($_FILES['image'])) {
         echo '<div class="container mt-3"><div class="alert alert-danger">Ingen fil skickades.</div></div>';
     } elseif ($_FILES['image']['error'] === UPLOAD_ERR_NO_FILE) {
@@ -33,11 +39,12 @@ if (isset($_POST['create_postcard'])) {
         $targetFile = $uploadDir . $imageName;
 
         if (move_uploaded_file($_FILES['image']['tmp_name'], $targetFile)) {
-            $sql = "INSERT INTO postcard (title, message, image_path, continent, country, city, created_at)
-                    VALUES (:title, :message, :image_path, :continent, :country, :city, NOW())";
+            $sql = "INSERT INTO postcard (user_id, title, message, image_path, continent, country, city, created_at)
+                    VALUES (:user_id, :title, :message, :image_path, :continent, :country, :city, NOW())";
 
             $stmt = $dbh->prepare($sql);
             $stmt->execute([
+                ':user_id' => $user_id,
                 ':title' => $title,
                 ':message' => $message,
                 ':image_path' => $targetFile,
