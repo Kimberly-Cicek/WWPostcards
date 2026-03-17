@@ -1,6 +1,7 @@
 <?php
 require_once 'assets/includes/header.php';
 ?>
+<<<<<<< HEAD
 <main>
 
     <!-- Hero section -->
@@ -17,115 +18,90 @@ require_once 'assets/includes/header.php';
             <a href="#" class="btn btn-lg btn-light text-success mt-4 rounded-pill">
                 Kom igång <i class="fa-solid fa-arrow-right ms-2"></i>
             </a>
+=======
+
+<head>
+<meta charset="UTF-8">
+<title>Reselog</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<main>
+
+<div class="container py-4">
+
+  <!-- LOGO -->
+  <img src="" alt="Logo" width="120" class="mb-3">
+
+  <!-- HERO -->
+  <div class="hero mb-5">
+
+    <h2 class="fw-bold">Discover the world, one postcard at a time</h2>
+
+    <div class="map-container mt-4">
+      <img src="https://uploads.onecompiler.io/442ssbwmc/44fzyrgz7/Jordglogen.png" class="img-fluid globe" alt="Jordglob">
+
+      <img src="https://uploads.onecompiler.io/442ssbwmc/44fzyrgz7/Pin.png" class="pin" alt="Pin">
+      <img src="https://uploads.onecompiler.io/442ssbwmc/44fzyrgz7/Pin.png" class="pin2" alt="Pin">
+    </div>
+
+  </div>
+
+  <!-- VYKORT -->
+  <h4 class="mb-4">Nyinkomna Vykort</h4>
+
+  <div class="row g-4">
+
+    <div class="col-12 col-md-6">
+      <div class="card shadow-sm">
+        <img src="https://uploads.onecompiler.io/442ssbwmc/44fzyrgz7/Sk%C3%A4rmavbild%202026-03-17%20kl.%2010.45.36.png" class="card-img-top">
+        <div class="card-body text-center">
+          <h6 class="card-title">Livets resa i Indonesien</h6>
+          <p class="card-text">Mina favorit platser på Bali.</p>
+>>>>>>> adbdeb8ba68f3b483f18db069fa14f107de150e7
         </div>
-    </section>
-    <!-- Features section -->
-    <section class="py-5">
-        <div class="container text-center">
-            <h2 class="mb-5 text-success">Varför välja EcoVibe?</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="feature-card p-4">
-                        <i class="fa-solid fa-solar-panel fa-3x text-success"></i>
-                        <h5 class="mt-3">Förnybar energi</h5>
-                        <p class="text-muted">
-                            Vi stödjer övergången till sol- och vindkraft
-                            för en renare energiframtid.
-                        </p>
-                    </div>
-                    5
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-card p-4">
-                        <i class="fa-solid fa-recycle fa-3x text-success"></i>
-                        <h5 class="mt-3">Cirkulär ekonomi</h5>
-                        <p class="text-muted">
-                            Minska avfall genom att återanvända och
-                            återvinna material i alla led.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-card p-4">
-                        <i class="fa-solid fa-water fa-3x text-success"></i>
-                        <h5 class="mt-3">Rent vatten</h5>
-                        <p class="text-muted">
-                            Skydda våra vattenresurser genom hållbar
-                            förvaltning och rening.
-                        </p>
-                    </div>
-                </div>
-            </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <div class="card shadow-sm">
+        <img src="https://uploads.onecompiler.io/442ssbwmc/44fzyrgz7/Sk%C3%A4rmavbild%202026-03-17%20kl.%2011.40.39.png" class="card-img-top">
+        <div class="card-body text-center">
+          <h6 class="card-title">Min utbytestermin i Paris</h6>
+          <p class="card-text">Smultronställen i Frankrike</p>
         </div>
-    </section>
-    <!-- Testimonial section -->
-    <section class="pt-5">
-        <div class="container">
-            <h2 class="text-center text-success mb-5">Vad våra kunder säger</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body">
-                            <div class="mb-3 text-warning">
-                                6
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <p class="card-text">
-                                "EcoVibe hjälpte oss att minska vårt koldioxidavtryck
-                                med 40% på bara ett år."
-                            </p>
-                            <p class="fw-bold mb-0">Anna Lindström</p>
-                            <small class="text-muted">VD, GreenTech AB</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body">
-                            <div class="mb-3 text-warning">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <p class="card-text">
-                                ”Fantastisk rådgivning! Vi har nu en helt
-                                hållbar leveranskedja.”
-                            </p>
-                            <p class="fw-bold mb-0">Erik Johansson</p>
-                            <small class="text-muted">Grundare, EcoShop</small>
-                        </div>
-                    </div>
-                </div>
-                7
-                <div class="col-md-4">
-                    <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body">
-                            <div class="mb-3 text-warning">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-regular fa-star"></i>
-                            </div>
-                            <p class="card-text">
-                                "Professionellt team som verkligen bryr sig
-                                om miljön. Rekommenderas!"
-                            </p>
-                            <p class="fw-bold mb-0">Sara Bergman</p>
-                            <small class="text-muted">Miljöchef, NaturCo</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <div class="card shadow-sm">
+        <img src="https://uploads.onecompiler.io/442ssbwmc/44fzyrgz7/Sk%C3%A4rmavbild%202026-03-17%20kl.%2011.43.04.png" class="card-img-top">
+        <div class="card-body text-center">
+          <h6 class="card-title">Backpackar i Sydamerika</h6>
+          <p class="card-text">Tips på hikes i Brasilien.</p>
         </div>
-    </section>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <div class="card shadow-sm">
+        <img src="https://uploads.onecompiler.io/442ssbwmc/44fzyrgz7/Sk%C3%A4rmavbild%202026-03-17%20kl.%2011.44.18.png" class="card-img-top">
+        <div class="card-body text-center">
+          <h6 class="card-title">Roadtrip i USA</h6>
+          <p class="card-text">Mina bästa stopp längs vägen.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
 </main>
+
 
 <?php
 // Include footer
