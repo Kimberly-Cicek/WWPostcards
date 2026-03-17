@@ -9,7 +9,7 @@ require_once 'assets/includes/header.php';
         <div class="container py-5">
             <h1 class="display-4 fw-bold">
                 <i class="fa-solid fa-seedling me-2"></i>
-                Bygg en grönare framtid
+                Bygg en balle framtid
             </h1>
             <p class="lead mt-3">
                 Vi hjälper företag och privatpersoner att göra hållbara val
