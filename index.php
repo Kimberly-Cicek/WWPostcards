@@ -1,9 +1,8 @@
 <?php
-// Include header
 require_once 'assets/includes/header.php';
 ?>
-
 <main>
+
     <!-- Hero section -->
     <section class="hero text-center text-white py-5">
         <div class="container py-5">
