@@ -1,8 +1,10 @@
 <?php
-// Include header
-require_once 'assets/includes/header.php';
+// Database connection
+require_once 'assets/config/db.php';
 // Register information to database
 require_once 'assets/functions/register-user.php';
+// Include header
+require_once 'assets/includes/header.php';
 ?>
 <main class="container">
     <form action="register.php" method="post">
