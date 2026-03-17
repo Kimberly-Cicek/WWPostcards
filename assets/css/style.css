@@ -130,3 +130,51 @@ body {
     background: #333;
     transform: translateY(-3px);
 }
+
+/*Startsida*/
+body{
+  background:#B9D3DC;
+}
+
+/* Hero section */
+.hero{
+  text-align:center;
+}
+
+/* Glob storlek */
+.globe{
+  max-width:600px;
+}
+
+/* Karta + pins */
+.map-container{
+  position:relative;
+  display:inline-block;
+}
+
+/* Pins */
+.pin{
+  position:absolute;
+  top:40%;
+  left:60%;
+  width:50px;
+}
+
+.pin2{
+  position:absolute;
+  top:60%;
+  left:30%;
+  width:50px;
+}
+
+/* Cards */
+.card{
+  border:none;
+  border-radius:12px;
+}
+
+.card img{
+  height:200px;
+  object-fit:cover;
+}
+/*
