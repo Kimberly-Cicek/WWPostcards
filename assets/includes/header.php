@@ -37,20 +37,57 @@ require_once 'assets/functions/photo.resize.php';
                     </li>
                     <li class="nav-item"><a href="#" class="nav-link">Produkter</a></li>
                     <li class="nav-item"><a href="feed.asia.php" class="nav-link">Asien</a></li>
-                    <li class="nav-item"><a href="my_page.php" class="nav-link">Min sida</a></li>
                 </ul>
                 <form class="d-flex">
                     <input type="search" class="form-control me-2" placeholder="Ange sökord...">
                     <button type="submit" class="btn btn-primary">Sök</button>
                 </form>
+                <?php
+                // Checks whether user is logged in or not
+                if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
+                    echo '
+    <a href="my_page.php" class="btn btn-outline-success me-2">
+    <i class="fa-solid fa-circle-user"></i> Min sida</a>
+    <a href="logout.php" class="btn btn-outline-success">Logga ut</a>';
+                } else {
+                    echo
+                    ' <!-- Button for login -->
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <button class="btn dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="fa-solid fa-circle-user"></i>Logga in
+                        </button>
+                        <div class="dropdown-menu">
+                            <form action="index.php" method="post">
+                                <div class="mb-3">
+                                    <label for="email" class="form-label sr-only"></label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                            </div>
+                            <div class="mb-3">
+                                    <label for="password" class="form-label sr-only"></label>
+                                    <input type="password" class="form-control" id="password"
+                                        name="password" placeholder="Lösenord">
+                                </div>
+                                <button type="submit" class="btn btn-success" name="login">Logga in</button>
+                            </form>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="register.php">Ej medlem? Registrera dig här!</a>
+                            <a class="dropdown-item" href="#">Glömt lösenord?</a>
+                        </div>
+                    </li>
+                </ul>';
+                } ?>
+
             </nav>
         </div>
 
+        <?php
+        // Checks whether user is logged in or not
+        if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
+            echo '
         <a href="add_postcard.php" class="floating-upload-btn">
             <i class="fa-solid fa-plus"></i> Skapa vykort
-        </a>
+        </a>';
+        }
+        ?>
     </header>
-
-</body>
-
-</html>
