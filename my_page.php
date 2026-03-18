@@ -22,6 +22,44 @@ $stmt->execute([
 $postcards = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
+<div class="container mb-4">
+    <form class="row g-3">
+        <div class="col-md-3">
+            <label for="country" class="form-label">Land</label>
+            <select id="country" class="form-select">
+                <option selected>Alla länder</option>
+                <option>Japan</option>
+                <option>Thailand</option>
+                <option>Sydkorea</option>
+            </select>
+        </div>
+
+        <div class="col-md-3">
+            <label for="city" class="form-label">Stad</label>
+            <select id="city" class="form-select">
+                <option selected>Alla städer</option>
+                <option>Tokyo</option>
+                <option>Bangkok</option>
+                <option>Seoul</option>
+            </select>
+        </div>
+
+        <div class="col-md-3">
+            <label for="date" class="form-label">Datum</label>
+            <select id="date" class="form-select">
+                <option selected>Senaste först</option>
+                <option>Äldsta först</option>
+                <option>Denna månad</option>
+                <option>Detta år</option>
+            </select>
+        </div>
+
+        <div class="col-md-3 d-flex align-items-end">
+            <button type="button" class="btn btn-dark w-100">Filtrera</button>
+        </div>
+    </form>
+</div>
+
 <div class="container py-5">
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h1 class="h2">Mina vykort</h1>
