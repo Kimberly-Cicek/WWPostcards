@@ -5,7 +5,7 @@ if (isset($_POST['login'])) {
     //Checks if email and password fields are empty
     if (empty($_POST['email']) || empty($_POST['password'])) {
         //redirect user to error page
-        header('Location: /index.php?action=empty');
+        header('Location: index.php?action=empty');
         exit();
     }
 
@@ -36,7 +36,7 @@ if (isset($_POST['login'])) {
         // Creates session variable with user id
         $_SESSION['user_id'] = $row['user_id'];
         // Redirects user to success page
-        header('Location: index.php');
+        header('Location: index.php?action=success');
         exit();
     } else {
         // Redirect user to error page
