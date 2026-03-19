@@ -13,7 +13,7 @@ VALUES (:email, :password, NOW())
     $stmt->bindValue(':password', $_POST['password']);
     // Sends query to database
     if ($stmt->execute()) {
-        header('Location: index.php?action=inserted');
+        header('Location: register.php?action=inserted');
         exit();
     }
 }

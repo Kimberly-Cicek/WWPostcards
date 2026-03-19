@@ -1,10 +1,27 @@
 <?php
-// Register information to database
-require_once 'assets/functions/register-user.php';
 // Include header
 require_once 'assets/includes/header.php';
+// Register information to database
+require_once 'assets/functions/register-user.php';
 ?>
 <main>
+    <!--Alert för lyckad registrering-->
+    <?php
+    // Checks if an action is set
+    if (isset($_GET['action'])) {
+      // Checks which action is set
+      switch ($_GET['action']) {
+        case 'inserted':
+          echo '
+<div class="alert alert-success">
+Din registrering lyckades!
+</div>
+';
+          break;
+
+      }
+    }
+    ?>
     <!--Formulär för registering-->
     <section class="container d-flex justify-content-center p-5 my-5" id="regform">
         <div>
