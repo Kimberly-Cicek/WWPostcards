@@ -41,10 +41,10 @@ require_once 'assets/functions/photo.resize.php';
                     <li class="nav-item"><a href="#" class="nav-link">Produkter</a></li>
                     <li class="nav-item"><a href="feed.asia.php" class="nav-link">Asien</a></li>
                 </ul>
-                <form class="d-flex">
+                <!--<form class="d-flex"
                     <input type="search" class="form-control me-2" placeholder="Ange sökord...">
                     <button type="submit" class="btn btn-primary">Sök</button>
-                </form>
+                </form>-->
                 <?php
                 // Checks whether user is logged in or not
                 if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
@@ -55,7 +55,7 @@ require_once 'assets/functions/photo.resize.php';
                 } else {
                     echo
                     ' <!-- Button for login -->
-                <ul class="navbar-nav">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
                         <button class="btn dropdown-toggle" data-bs-toggle="dropdown">
                             <i class="fa-solid fa-circle-user"></i>Logga in
