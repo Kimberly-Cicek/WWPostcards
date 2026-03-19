@@ -13,8 +13,10 @@ require_once 'assets/functions/register-user.php';
       switch ($_GET['action']) {
         case 'inserted':
           echo '
-<div class="alert alert-success">
+          <div class="container d-flex justify-content-center mt-3">
+<div class="alert alert-success w-50 text-center">
 Din registrering lyckades!
+</div>
 </div>
 ';
           break;

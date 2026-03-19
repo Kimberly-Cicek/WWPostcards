@@ -19,15 +19,19 @@ require_once 'assets/includes/header.php';
       switch ($_GET['action']) {
         case 'empty':
           echo '
-<div class="alert alert-warning">
+          <div class="container d-flex justify-content-center mt-3">
+<div class="alert alert-warning w-50 text-center">
 Du har inte angett någon e-postadress eller lösenord!
+</div>
 </div>
 ';
           break;
         case 'error':
           echo '
-<div class="alert alert-danger">
+          <div class="container d-flex justify-content-center mt-3">
+<div class="alert alert-danger w-50 text-center">
 Du har angett felaktig e-postadress eller lösenord!
+</div>
 </div>
 
 
@@ -35,8 +39,10 @@ Du har angett felaktig e-postadress eller lösenord!
           break;
         case 'success':
           echo '
-            <div class="alert alert-success">
+          <div class="container d-flex justify-content-center mt-3">
+            <div class="alert alert-success w-50 text-center">
             Välkommen tillbaka!
+            </div>
             </div>
             ';
           break;
