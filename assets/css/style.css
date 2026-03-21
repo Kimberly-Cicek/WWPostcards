@@ -175,6 +175,19 @@ body {
   left: 30%;
   width: 50px;
 }
+.pin3 {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  width: 50px;
+}
+
+.pin4 {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  width: 50px;
+}
 
 /* Cards */
 .card {
