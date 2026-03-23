@@ -141,66 +141,92 @@ body {
 }
 
 /*Startsida*/
-.body {
+/* FIX background */
+body {
   background: #b9d3dc;
 }
 
-/* Hero section */
+/* Hero */
 .hero {
   text-align: center;
 }
 
-/* Glob storlek */
+/* Glob */
 .globe {
   max-width: 1000px;
 }
 
-/* Karta + pins */
+/* Map container */
 .map-container {
   position: relative;
   display: inline-block;
 }
 
-/* Pins */
-.pin {
+/* ===== PINS ===== */
+.pin, .pin2, .pin3, .pin4, .pin5, .pin6 {
   position: absolute;
-  top: 30%;
-  left: 70%;
   width: 60px;
+  cursor: pointer;
 }
 
-.pin2 {
-  position: absolute;
-  top: 30%;
-  left: 52%;
-  width: 60px;
-}
-.pin3 {
-  position: absolute;
-  top: 33%;
-  left: 20%;
-  width: 60px;
+/* Din positionering (behåll exakt) */
+.pin { top: 30%; left: 70%; }
+.pin2 { top: 30%; left: 52%; }
+.pin3 { top: 33%; left: 20%; }
+.pin4 { top: 56%; left: 31%; }
+.pin5 { top: 45%; left: 52%; }
+.pin6 { top: 49%; left: 79%; }
+
+/* Bild i pin */
+.pin img,
+.pin2 img,
+.pin3 img,
+.pin4 img,
+.pin5 img,
+.pin6 img {
+  width: 100%;
+  transition: transform 0.2s;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
 }
 
-.pin4 {
-  position: absolute;
-  top: 56%;
-  left: 31%;
-  width: 60px;
-}
-.pin5 {
-  position: absolute;
-  top: 45%;
-  left: 52%;
-  width: 60px;
-}
-.pin6 {
-  position: absolute;
-  top: 49%;
-  left: 79%;
-  width: 60px;
+/* Hover effekt */
+.pin:hover img,
+.pin2:hover img,
+.pin3:hover img,
+.pin4:hover img,
+.pin5:hover img,
+.pin6:hover img {
+  transform: scale(1.2);
 }
 
+/* ===== POPUP ===== */
+.popup {
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+
+  background: black;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+
+  opacity: 0;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+/* Visa popup */
+.pin:hover .popup,
+.pin2:hover .popup,
+.pin3:hover .popup,
+.pin4:hover .popup,
+.pin5:hover .popup,
+.pin6:hover .popup {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
 /* Cards */
 .card {
   border: none;

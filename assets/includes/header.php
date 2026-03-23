@@ -27,12 +27,14 @@ require_once 'assets/functions/photo.resize.php';
 </head>
 
 <body>
-    <header class="p-3 border-bottom">
+    <header class="p-3 border-bottom"> 
         <div class="container">
             <nav class="navbar navbar-expand-md">
                 <a href="index.html" class="navbar-brand">
-                    <i class="fa-solid fa-camera"></i>
+                     <img src="uploads/LoggaPostcards.png" alt="Logo" width="150" class="mb-3"> 
                     <span class="ms-1">Pixie</span>
+                     
+
                 </a>
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
