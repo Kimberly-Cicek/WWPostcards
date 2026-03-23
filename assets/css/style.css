@@ -164,29 +164,41 @@ body {
 /* Pins */
 .pin {
   position: absolute;
-  top: 40%;
-  left: 60%;
-  width: 50px;
+  top: 30%;
+  left: 70%;
+  width: 60px;
 }
 
 .pin2 {
   position: absolute;
-  top: 60%;
-  left: 30%;
-  width: 50px;
+  top: 30%;
+  left: 52%;
+  width: 60px;
 }
 .pin3 {
   position: absolute;
-  top: 40%;
-  left: 30%;
-  width: 50px;
+  top: 33%;
+  left: 20%;
+  width: 60px;
 }
 
 .pin4 {
   position: absolute;
-  top: 60%;
-  left: 50%;
-  width: 50px;
+  top: 56%;
+  left: 31%;
+  width: 60px;
+}
+.pin5 {
+  position: absolute;
+  top: 45%;
+  left: 52%;
+  width: 60px;
+}
+.pin6 {
+  position: absolute;
+  top: 49%;
+  left: 79%;
+  width: 60px;
 }
 
 /* Cards */
