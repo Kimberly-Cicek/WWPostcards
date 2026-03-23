@@ -56,17 +56,17 @@ if (isset($_GET['action'])) {
 
       <img src="https://uploads.onecompiler.io/442ssbwmc/44fzyrgz7/Jordglogen.png" class="globe" alt="Jordglob">
 
-      <!-- EUROPE -->
-      <div class="pin">
-        <img src="https://uploads.onecompiler.io/442ssbwmc/44fzyrgz7/Pin.png">
-        <div class="popup">ASIA</div>
-      </div>
+    <!-- ASIA (klickbar - första pinnen) -->
+<a href="feed.asia.php" class="pin">
+    <img src="https://uploads.onecompiler.io/442ssbwmc/44fzyrgz7/Pin.png">
+    <div class="popup">ASIA</div>
+</a>
 
-      <!-- ASIA(KLICKBAR) -->
-      <a href="asien.php" class="pin2">
-        <img src="https://uploads.onecompiler.io/442ssbwmc/44fzyrgz7/Pin.png">
-        <div class="popup">EUROPE</div>
-      </a>
+<!-- EUROPE (inte klickbar) -->
+<div class="pin2">
+    <img src="https://uploads.onecompiler.io/442ssbwmc/44fzyrgz7/Pin.png">
+    <div class="popup">EUROPE</div>
+</div>
 
       <!-- NORTH AMERICA -->
       <div class="pin3">

@@ -30,12 +30,13 @@ require_once 'assets/functions/photo.resize.php';
     <header class="p-3 border-bottom"> 
         <div class="container">
             <nav class="navbar navbar-expand-md">
-                <a href="index.html" class="navbar-brand">
-                     <img src="uploads/LoggaPostcards.png" alt="Logo" width="150" class="mb-3"> 
-                    <span class="ms-1">Pixie</span>
-                     
-
+                <a href="index.htm" class="navbar-brand">
+                    
                 </a>
+            
+                <a href="index.php">
+    <img src="uploads/LoggaPostcards.png" alt="Logo" width="150" class="mb-3">
+</a>
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
                         <a href="#" class="nav-link active">Startsidan</a>
