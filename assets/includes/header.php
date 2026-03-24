@@ -41,14 +41,14 @@ require_once 'assets/functions/photo.resize.php';
                     <li class="nav-item">
                         <a href="index.php" class="nav-link active">Startsidan</a>
                     </li>
-                    <li class="nav-item"><a href="feed.asia.php" class="nav-link">Asien</a></li>
+                    <li class="nav-item"><a href="feed.asia.php" class="nav-link">Vykort<i class="fa-regular fa-envelope"></i></li>
                 </ul>
                 <?php
                 // Checks whether user is logged in or not
                 if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
                     echo '
     <a href="my_page.php" class="btn me-2">
-    <i class="fa-solid fa-user min-sida-btn"></i></a>
+    <i class="fa-solid fa-house-chimney min-sida-btn"></i></a>
     <a href="logout.php" class="btn rounded-pill py-2 px-4 logout-btn">Logga ut</a>';
                 } else {
                     echo
@@ -56,7 +56,7 @@ require_once 'assets/functions/photo.resize.php';
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
                         <button class="btn dropdown-toggle rounded-pill py-2 px-4 loggain-drop" data-bs-toggle="dropdown">
-                            <i class="fa-solid fa-circle-user mx-2"></i>Logga in
+                            <i class="fa-solid fa-house-chimney mx-2"></i>Logga in
                         </button>
                         <div class="dropdown-menu dropdown-menu-end p-4 px-5">
                             <form action="index.php" method="post">
