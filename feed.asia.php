@@ -70,7 +70,7 @@ $postcards = $stmt->fetchAll();
 <div class="container py-5">
     <h1 class="h2 mb-4">Vykort från Asien</h1>
 
-    <?php if ($postcards): ?>
+   <?php if ($postcards): ?>
         <div class="row g-4">
             <?php foreach ($postcards as $row): ?>
                 <div class="col-12 col-lg-6 d-flex">
