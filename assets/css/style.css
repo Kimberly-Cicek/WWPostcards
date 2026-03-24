@@ -288,6 +288,7 @@ body {
 
 .loggain-drop:hover {
   background-color: #ffaca0;
+  box-shadow: 0 4px 10px 0 #00000035;
 }
 
 .logga-in,
@@ -299,11 +300,35 @@ body {
 
 .logga-in:hover {
   background-color: #ffaca0;
+  box-shadow: 0 4px 10px 0 #00000035;
 }
 
 /* Inloggad header*/
 
 .min-sida-btn {
   font-size: 2rem;
-  border:none; 
+  color: #ff7f6a;
+  transition: color 0.3s ease;
+}
+
+.min-sida-btn:hover {
+  color: #ffaca0;
+  box-shadow: 0 4px 10px 0 #00000035;
+}
+
+.logout-btn {
+  background-color: #ff7f6a;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #ffaca0;
+  box-shadow: 0 4px 10px 0 #00000035;
+}
+
+/* Alerts */
+
+.alert {
+  border: 2px solid;
+  border-radius: 20px;
 }

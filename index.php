@@ -30,7 +30,7 @@ if (isset($_GET['action'])) {
       echo '
       <div class="container d-flex justify-content-center mt-3">
         <div class="alert alert-success w-50 text-center">
-          Välkommen tillbaka!
+          Välkommen tillbaka! <i class="fa-regular fa-envelope"></i>
         </div>
       </div>';
       break;

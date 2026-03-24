@@ -48,19 +48,19 @@ require_once 'assets/functions/photo.resize.php';
                 if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
                     echo '
     <a href="my_page.php" class="btn me-2">
-    <i class="fa-solid fa-circle-user min-sida-btn"></i></a>
-    <a href="logout.php" class="btn logout-btn">Logga ut</a>';
+    <i class="fa-solid fa-user min-sida-btn"></i></a>
+    <a href="logout.php" class="btn rounded-pill py-2 px-4 logout-btn">Logga ut</a>';
                 } else {
                     echo
                     ' <!-- Button for login -->
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
-                        <button class="btn dropdown-toggle loggain-drop" data-bs-toggle="dropdown">
+                        <button class="btn dropdown-toggle rounded-pill py-2 px-4 loggain-drop" data-bs-toggle="dropdown">
                             <i class="fa-solid fa-circle-user mx-2"></i>Logga in
                         </button>
-                        <div class="dropdown-menu dropdown-menu-end p-3">
+                        <div class="dropdown-menu dropdown-menu-end p-4 px-5">
                             <form action="index.php" method="post">
-                                <div class="mb-3">
+                                <div class="mb-2">
                                     <label for="email" class="form-label sr-only"></label>
                                     <input type="email" class="form-control" id="email" name="email" placeholder="Email">
                             </div>
@@ -70,11 +70,11 @@ require_once 'assets/functions/photo.resize.php';
                                         name="password" placeholder="Lösenord">
                                 </div>
                                 <div class="text-center">
-                                <button type="submit" class="btn logga-in" name="login">Logga in</button>
+                                <button type="submit" class="btn logga-in px-5 py-2 rounded-pill" name="login">Logga in</button>
                                 </div>
                             </form>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="register.php">Ej medlem? Registrera dig här!</a>
+                            <a class="dropdown-item" href="register.php">Ej medlem? Registrera dig här!<i class="fa-solid fa-circle-right ps-1"></i></a>
                             <a class="dropdown-item" href="#">Glömt lösenord?</a>
                         </div>
                     </li>

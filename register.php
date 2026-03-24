@@ -48,7 +48,7 @@ Du har inte fyllt i alla fält!
                         name="password">
                 </div>
                 <div class="text-center">
-                    <button type="submit" class="btn rounded-pill px-3 mt-5" name="register">Registrera dig!</button>
+                    <button type="submit" class="btn rounded-pill px-3 mt-5" name="register">Registrera dig! <i class="fa-solid fa-circle-plus"></i></button>
                 </div>
                 <div class="text-center">
                     <p class="text-muted divider-top mt-3">eller logga in med</p>
