@@ -103,7 +103,7 @@ if (isset($_GET['action'])) {
 
     <div class="col-12 col-md-6">
       <div class="card shadow-sm">
-        <img src="https://uploads.onecompiler.io/442ssbwmc/44fzyrgz7/Sk%C3%A4rmavbild%202026-03-17%20kl.%2010.45.36.png" class="card-img-top">
+        <img src="uploads/1774279660_Skärmavbild 2026-03-17 kl. 10.45.36.png" class="card-img-top">
         <div class="card-body text-center">
           <h6 class="card-title">Livets resa i Indonesien</h6>
           <p class="card-text">Mina favorit platser på Bali.</p>
