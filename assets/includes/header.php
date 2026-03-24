@@ -21,8 +21,13 @@ require_once 'assets/functions/photo.resize.php';
     <link rel="stylesheet" href="assets/css/all.min.css">
     <!-- Jcrop css -->
     <link rel="stylesheet" href="assets/css/jcrop.min.css">
+        <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <!-- Custom styles -->
     <link rel="stylesheet" href="assets/css/style.css">
+
 
 </head>
 
@@ -55,7 +60,7 @@ require_once 'assets/functions/photo.resize.php';
                     ' <!-- Button for login -->
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
-                        <button class="btn dropdown-toggle rounded-pill py-2 px-4 loggain-drop" data-bs-toggle="dropdown">
+                        <button class="btn dropdown-toggle rounded-pill py-2 px-4 loggain-drop" data-bs-toggle="dropdown" type="button">
                             <i class="fa-solid fa-house-chimney mx-2"></i>Logga in
                         </button>
                         <div class="dropdown-menu dropdown-menu-end p-4 px-5">

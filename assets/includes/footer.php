@@ -17,3 +17,4 @@
 <!-- JCrop JS -->
 <script src="assets/js/jcrop.min.js"></script>
 <script src="assets/js/resize.js"></script>
+</body>
