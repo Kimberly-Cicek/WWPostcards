@@ -70,31 +70,46 @@ $postcards = $stmt->fetchAll();
 <div class="container py-5">
     <h1 class="h2 mb-4">Vykort från Asien</h1>
 
-    <?php if ($postcards): ?>
+   <?php if ($postcards): ?>
         <div class="row g-4">
             <?php foreach ($postcards as $row): ?>
                 <div class="col-12 col-lg-6 d-flex">
                     <div class="postcard-card shadow-sm w-100">
-
                         <div class="row g-0 h-100">
+
                             <div class="col-md-6">
-                                <img src="<?= htmlspecialchars($row['image_path'] ?? '') ?>" class="postcard-image">
+                                <div class="postcard-image-wrap">
+                                    <img src="<?= htmlspecialchars($row['image_path'] ?? '') ?>"
+                                        alt="<?= htmlspecialchars($row['title'] ?? '') ?>"
+                                        class="postcard-image">
+                                </div>
                             </div>
 
-                            <div class="col-md-6 p-3">
-                                <h2><?= htmlspecialchars($row['title']) ?></h2>
+                            <div class="col-md-6">
+                                <div class="postcard-back">
+                                    <div class="stamp-box">
+                                        <i class="fa-solid fa-location-dot fa-2x" style="color: #ff5733;"></i>
+                                    </div>
 
-                                <p>
-                                    <?= htmlspecialchars($row['city']) ?>,
-                                    <?= htmlspecialchars($row['country']) ?>
-                                </p>
+                                    <h2 class="postcard-title">
+                                        <?= htmlspecialchars($row['title'] ?? '') ?>
+                                    </h2>
 
-                                <p><?= nl2br(htmlspecialchars($row['message'])) ?></p>
+                                    <p class="postcard-location">
+                                        <?= htmlspecialchars($row['city'] ?? '') ?>,
+                                        <?= htmlspecialchars($row['country'] ?? '') ?>
+                                    </p>
 
-                                <p class="text-muted">
-                                    <?= htmlspecialchars($row['created_at']) ?>
-                                </p>
+                                    <div class="postcard-message">
+                                        <?= nl2br(htmlspecialchars($row['message'] ?? '')) ?>
+                                    </div>
+
+                                    <p class="postcard-date">
+                                        Publicerad: <?= htmlspecialchars($row['created_at'] ?? '') ?>
+                                    </p>
+                                </div>
                             </div>
+
                         </div>
 
                         <!-- =========================
