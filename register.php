@@ -1,8 +1,7 @@
 <?php
-// Include header
-require_once 'assets/includes/header.php';
-// Register information to database
+require_once 'assets/config/db.php';                // Lägg till denna
 require_once 'assets/functions/register-user.php';
+require_once 'assets/includes/header.php';
 ?>
 <main>
     <!--Alert för lyckad registrering-->
