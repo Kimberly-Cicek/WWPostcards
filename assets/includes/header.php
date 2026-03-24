@@ -47,18 +47,18 @@ require_once 'assets/functions/photo.resize.php';
                 // Checks whether user is logged in or not
                 if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
                     echo '
-    <a href="my_page.php" class="btn btn-outline-success me-2">
-    <i class="fa-solid fa-circle-user"></i> Min sida</a>
-    <a href="logout.php" class="btn btn-outline-success">Logga ut</a>';
+    <a href="my_page.php" class="btn me-2">
+    <i class="fa-solid fa-circle-user min-sida-btn"></i></a>
+    <a href="logout.php" class="btn logout-btn">Logga ut</a>';
                 } else {
                     echo
                     ' <!-- Button for login -->
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
-                        <button class="btn dropdown-toggle" data-bs-toggle="dropdown">
-                            <i class="fa-solid fa-circle-user"></i>Logga in
+                        <button class="btn dropdown-toggle loggain-drop" data-bs-toggle="dropdown">
+                            <i class="fa-solid fa-circle-user mx-2"></i>Logga in
                         </button>
-                        <div class="dropdown-menu">
+                        <div class="dropdown-menu dropdown-menu-end p-3">
                             <form action="index.php" method="post">
                                 <div class="mb-3">
                                     <label for="email" class="form-label sr-only"></label>
@@ -69,7 +69,9 @@ require_once 'assets/functions/photo.resize.php';
                                     <input type="password" class="form-control" id="password"
                                         name="password" placeholder="Lösenord">
                                 </div>
-                                <button type="submit" class="btn btn-success" name="login">Logga in</button>
+                                <div class="text-center">
+                                <button type="submit" class="btn logga-in" name="login">Logga in</button>
+                                </div>
                             </form>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="register.php">Ej medlem? Registrera dig här!</a>

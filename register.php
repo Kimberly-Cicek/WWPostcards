@@ -9,19 +9,27 @@ require_once 'assets/functions/register-user.php';
     <?php
     // Checks if an action is set
     if (isset($_GET['action'])) {
-      // Checks which action is set
-      switch ($_GET['action']) {
-        case 'inserted':
-          echo '
+        // Checks which action is set
+        switch ($_GET['action']) {
+            case 'inserted':
+                echo '
           <div class="container d-flex justify-content-center mt-3">
 <div class="alert alert-success w-50 text-center">
 Din registrering lyckades!
 </div>
 </div>
 ';
-          break;
+                break;
 
-      }
+            case 'empty':
+                echo '
+          <div class="container d-flex justify-content-center mt-3">
+<div class="alert alert-danger w-50 text-center">
+Du har inte fyllt i alla fält!
+</div>
+</div>  ';
+                break;
+        }
     }
     ?>
     <!--Formulär för registering-->

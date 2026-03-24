@@ -1,6 +1,13 @@
 <?php
 // Checks whether the registration button has been pressed
 if (isset($_POST['register'])) {
+
+    //Check if email and password fields are empty
+
+    if (empty($_POST['email']) || empty($_POST['password'])) {
+        header('Location: register.php?action=empty');
+        exit();
+    }
     // Creates a query
     $sql = '
 INSERT INTO users ( email, password, regdate)

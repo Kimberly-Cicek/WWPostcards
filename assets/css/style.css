@@ -263,7 +263,7 @@ body {
 #regform button {
   background-color: #ff7f6a;
   color: #2f2f2f;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 #regform button:hover {
@@ -274,4 +274,36 @@ body {
 
 .form-control {
   border: 2px solid #1f4e5f;
+}
+
+/* Logga in-dropdown */
+
+.loggain-drop,
+.loggain-drop:focus,
+.loggain-drop:active {
+  background-color: #ff7f6a;
+  border: none;
+  transition: background-color 0.3s easer;
+}
+
+.loggain-drop:hover {
+  background-color: #ffaca0;
+}
+
+.logga-in,
+.logga-in:active,
+.logga-in:focus {
+  background-color: #ff7f6a;
+  transition: background-color 0.3s ease;
+}
+
+.logga-in:hover {
+  background-color: #ffaca0;
+}
+
+/* Inloggad header*/
+
+.min-sida-btn {
+  font-size: 2rem;
+  border:none; 
 }
