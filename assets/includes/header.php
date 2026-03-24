@@ -39,9 +39,8 @@ require_once 'assets/functions/photo.resize.php';
 </a>
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item">
-                        <a href="#" class="nav-link active">Startsidan</a>
+                        <a href="index.php" class="nav-link active">Startsidan</a>
                     </li>
-                    <li class="nav-item"><a href="#" class="nav-link">Produkter</a></li>
                     <li class="nav-item"><a href="feed.asia.php" class="nav-link">Asien</a></li>
                 </ul>
                 <?php
