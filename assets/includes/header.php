@@ -41,7 +41,7 @@ require_once 'assets/functions/photo.resize.php';
                     <li class="nav-item">
                         <a href="index.php" class="nav-link active">Startsidan</a>
                     </li>
-                    <li class="nav-item"><a href="feed.asia.php" class="nav-link">Vykort<i class="fa-regular fa-envelope"></i></li>
+                    <li class="nav-item"><a href="feed.asia.php" class="nav-link">Vykort<i class="fa-regular fa-envelope"></i></a></li>
                 </ul>
                 <?php
                 // Checks whether user is logged in or not
