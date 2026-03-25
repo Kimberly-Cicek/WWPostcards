@@ -21,10 +21,10 @@ require_once 'assets/functions/photo.resize.php';
     <link rel="stylesheet" href="assets/css/all.min.css">
     <!-- Jcrop css -->
     <link rel="stylesheet" href="assets/css/jcrop.min.css">
-        <!-- Google fonts -->
+    <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <!-- Custom styles -->
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -32,28 +32,45 @@ require_once 'assets/functions/photo.resize.php';
 </head>
 
 <body>
-    <header class="p-3 border-bottom"> 
+    <header class="p-3 border-bottom">
         <div class="container">
             <nav class="navbar navbar-expand-md">
                 <a href="index.htm" class="navbar-brand">
-                    
+
                 </a>
-            
+
                 <a href="index.php">
-    <img src="uploads/LoggaPostcards.png" alt="Logo" width="150" class="mb-3">
-</a>
+                    <img src="uploads/LoggaPostcards.png" alt="Logo" width="150" class="mb-3">
+                </a>
                 <ul class="navbar-nav me-auto">
+                    <?php
+                    if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
+                        echo '
+                                    
                     <li class="nav-item">
-                        <a href="index.php" class="nav-link active">Startsidan</a>
+                        <a href="index.php" class="nav-link">Om oss</a>
                     </li>
-                    <li class="nav-item"><a href="feed.asia.php" class="nav-link">Vykort<i class="fa-regular fa-envelope"></i></a></li>
+                    <li class="nav-item"><a href="feed.asia.php" class="nav-link">Upptäck vykort</a></li>
+                       <li class="nav-item">
+                    <a href="add_postcard.php" class="nav-link">Skapa vykort</a>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link">Mina vänner</a></li>';
+                    } else {
+                        echo '
+                    <li class="nav-item">
+                        <a href="index.php" class="nav-link">Om oss</a>
+                    </li>
+                    <li class="nav-item"><a href="feed.asia.php" class="nav-link">Upptäck vykort</a></li>
+                       <li class="nav-item">';
+                    }
+                    ?>
                 </ul>
                 <?php
                 // Checks whether user is logged in or not
                 if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
                     echo '
     <a href="my_page.php" class="btn me-2">
-    <i class="fa-solid fa-house-chimney min-sida-btn"></i></a>
+    <i class="fa-solid fa-user min-sida-btn"></i></a>
     <a href="logout.php" class="btn rounded-pill py-2 px-4 logout-btn">Logga ut</a>';
                 } else {
                     echo
@@ -61,7 +78,7 @@ require_once 'assets/functions/photo.resize.php';
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
                         <button class="btn dropdown-toggle rounded-pill py-2 px-4 loggain-drop" data-bs-toggle="dropdown" type="button">
-                            <i class="fa-solid fa-house-chimney mx-2"></i>Logga in
+                            <i class="fa-solid fa-user mx-2"></i>Logga in
                         </button>
                         <div class="dropdown-menu dropdown-menu-end p-4 px-5">
                             <form action="index.php" method="post">

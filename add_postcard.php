@@ -1,8 +1,9 @@
 <?php
+require_once 'assets/includes/header.php';
 require_once 'assets/includes/display_errors.php';
 require_once 'assets/config/db.php';
 require_once 'assets/functions/insert.php';
-require_once 'assets/includes/header.php';
+
 ?>
 
 <main class="container mt-5">
