@@ -83,12 +83,10 @@ a {
   line-height: 1.8;
   padding-top: 0.25rem;
   word-break: break-word;
-  background-image: repeating-linear-gradient(
-    to bottom,
-    transparent,
-    transparent 27px,
-    #dcdcdc 28px
-  );
+  background-image: repeating-linear-gradient(to bottom,
+      transparent,
+      transparent 27px,
+      #dcdcdc 28px);
 }
 
 /* Datum */
@@ -160,6 +158,7 @@ a {
   transform: translateY(-3px);
 }
 
+
 /*Startsida*/
 
 /* Hero */
@@ -199,22 +198,27 @@ a {
   top: 30%;
   left: 70%;
 }
+
 .pin2 {
   top: 30%;
   left: 52%;
 }
+
 .pin3 {
   top: 33%;
   left: 20%;
 }
+
 .pin4 {
   top: 56%;
   left: 31%;
 }
+
 .pin5 {
   top: 45%;
   left: 52%;
 }
+
 .pin6 {
   top: 49%;
   left: 79%;
@@ -270,6 +274,7 @@ a {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
 }
+
 /* Cards */
 .card {
   border: none;
@@ -341,28 +346,28 @@ a {
 .logga-in:active,
 .logga-in:focus {
   background-color: #ff7f6a;
-  color:#1f4e5f;
+  color: #1f4e5f;
   transition: background-color 0.3s ease;
 }
 
 .logga-in:hover {
   background-color: #ffaca0;
-  color:#1f4e5f;
+  color: #1f4e5f;
 }
 
 .dropdown-item {
-  color:#1f4e5f;
+  color: #1f4e5f;
   transition: background-color 0.3s ease;
 }
 
 .dropdown-item:hover {
-  color:#1f4e5f;
+  color: #1f4e5f;
   background-color: #dceff7;
   border-radius: 10px;
 }
 
 .logout-btn {
-  color:#1f4e5f;
+  color: #1f4e5f;
 }
 
 /* Inloggad header*/
@@ -403,8 +408,28 @@ header {
   color: #dceff7;
   font-weight: bold;
 }
+
 .navbar-nav .nav-link:hover {
   color: #1f4e5f;
+}
+
+/* Create postcard */
+
+.postcard-box {
+  background-color: #f3e8d2;
+
+}
+
+.btn-custom {
+  color: #ff7f6a;
+  border: 1px solid #ff7f6a;
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+.btn-custom:hover {
+  background-color: #ff7f6a;
+  color: white;
 }
 
 
