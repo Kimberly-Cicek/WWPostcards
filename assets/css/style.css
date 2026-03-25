@@ -12,6 +12,10 @@ h5,
   font-family: "Noto Serif Display", serif !important;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
 body,
 textarea,
 p,
@@ -372,12 +376,12 @@ a {
 
 .min-sida-btn {
   font-size: 2rem;
-  color: #ff7f6a;
+  color: #1f4e5f;
   transition: color 0.3s ease;
 }
 
 .min-sida-btn:hover {
-  color: #ffaca0;
+  color: #dceff7;
   box-shadow: 0 4px 10px 0 #00000035;
 }
 
