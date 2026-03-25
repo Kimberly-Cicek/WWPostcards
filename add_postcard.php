@@ -1,69 +1,68 @@
 <?php
-require_once 'assets/includes/display_errors.php';
-require_once 'assets/config/db.php';
-require_once 'assets/functions/insert.php';
 require_once 'assets/includes/header.php';
 ?>
 
-<main class="container mt-5">
-    <h1 class="mb-4">Skapa nytt vykort</h1>
+<main class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8 col-xl-7">
 
-    <form action="add_postcard.php" method="post" enctype="multipart/form-data">
+            <div class="postcard-box shadow-sm rounded-4 p-4 p-md-5">
+                <h1 class="mb-4 text-center">Create new postcard</h1>
+                <p class="text-muted text-center mb-5">
+                    Drop a postcard from the place you’re in — show the view, name the spot, and tell your story!
+                </p>
+                <form action="add_postcard.php" method="post" enctype="multipart/form-data">
 
-        <div class="row mb-3">
-            <label for="title" class="col-2 col-form-label">Rubrik</label>
-            <div class="col-6">
-                <input type="text" class="form-control" id="title" name="title" required>
+                    <div class="mb-4">
+                        <label for="title" class="form-label fw-semibold">Title</label>
+                        <input type="text" class="form-control" id="title" name="title" required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="message" class="form-label fw-semibold">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="6" required></textarea>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="continent" class="form-label fw-semibold">Continent</label>
+                        <select class="form-select" id="continent" name="continent" required>
+                            <option value="">Choose continent</option>
+                            <option value="Asien">Asia</option>
+                            <option value="Europa">Europe</option>
+                            <option value="Afrika">Africa</option>
+                            <option value="Nordamerika">North America</option>
+                            <option value="Sydamerika">South America</option>
+                            <option value="Oceanien">Oceania</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="country" class="form-label fw-semibold">Country</label>
+                        <input type="text" class="form-control" id="country" name="country" required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="city" class="form-label fw-semibold">City</label>
+                        <input type="text" class="form-control" id="city" name="city" required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="image" class="form-label fw-semibold">Picture</label>
+                        <input type="file" class="form-control" id="image" name="image" accept="image/*" required>
+                    </div>
+
+                    <div class="d-flex justify-content-end mt-4">
+                        <button type="submit" class="btn btn-custom px-4 py-2">
+                            Send postcard
+                        </button>
+                    </div>
+
+                </form>
+
             </div>
-        </div>
 
-        <div class="row mb-3">
-            <label for="message" class="col-2 col-form-label">Text</label>
-            <div class="col-6">
-                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-            </div>
         </div>
-
-        <div class="row mb-3">
-            <label for="continent" class="col-2 col-form-label">Kontinent</label>
-            <div class="col-6">
-                <select class="form-select" id="continent" name="continent" required>
-                    <option value="">Välj kontinent</option>
-                    <option value="Asien">Asien</option>
-                    <option value="Europa">Europa</option>
-                    <option value="Afrika">Afrika</option>
-                    <option value="Nordamerika">Nordamerika</option>
-                    <option value="Sydamerika">Sydamerika</option>
-                    <option value="Oceanien">Oceanien</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="row mb-3">
-            <label for="country" class="col-2 col-form-label">Land</label>
-            <div class="col-6">
-                <input type="text" class="form-control" id="country" name="country" required>
-            </div>
-        </div>
-
-        <div class="row mb-3">
-            <label for="city" class="col-2 col-form-label">Stad</label>
-            <div class="col-6">
-                <input type="text" class="form-control" id="city" name="city" required>
-            </div>
-        </div>
-
-        <div class="row mb-4">
-            <label for="image" class="col-2 col-form-label">Bild</label>
-            <div class="col-6">
-                <input type="file" class="form-control" id="image" name="image" accept="image/*" required>
-            </div>
-        </div>
-
-        <button type="submit" class="btn btn-success" name="create_postcard">
-            Publicera vykort
-        </button>
-    </form>
+    </div>
 </main>
 
 <?php require_once 'assets/includes/footer.php'; ?>

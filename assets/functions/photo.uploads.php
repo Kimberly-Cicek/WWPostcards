@@ -2,7 +2,7 @@
 // Checks whether upload button has been pressed
 if (isset($_POST['create_postcard'])) {
     // Checks whether a file has been selected
-    if ($_FILES['photo']['size'] != 0) {
+    if (isset($_FILES['photo']) && $_FILES['photo']['size'] != 0) {
         // Sets max filesize to 10 MB (1 MB = 1048576 bytes)
         $max_file_size = 10485760;
         // Sets accepted image files

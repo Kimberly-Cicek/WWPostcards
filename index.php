@@ -12,7 +12,7 @@ if (isset($_GET['action'])) {
       echo '
       <div class="container d-flex justify-content-center mt-3">
         <div class="alert alert-warning w-50 text-center">
-          Du har inte angett någon e-postadress eller lösenord!
+          You have left some fields empty!
         </div>
       </div>';
       break;
@@ -21,7 +21,7 @@ if (isset($_GET['action'])) {
       echo '
       <div class="container d-flex justify-content-center mt-3">
         <div class="alert alert-danger w-50 text-center">
-          Du har angett felaktig e-postadress eller lösenord!
+          You have entered an invalid email address or password!
         </div>
       </div>';
       break;
@@ -30,7 +30,7 @@ if (isset($_GET['action'])) {
       echo '
       <div class="container d-flex justify-content-center mt-3">
         <div class="alert alert-success w-50 text-center">
-          Välkommen tillbaka! <i class="fa-regular fa-envelope"></i>
+          Welcome back! <i class="fa-regular fa-envelope"></i>
         </div>
       </div>';
       break;
@@ -43,11 +43,11 @@ if (isset($_GET['action'])) {
   <!-- HERO -->
   <div class="hero mb-5 text-center">
 
-    <h1 class="display-4 fw-bold">
+    <h1 class="display fw-bold">
       Discover the world, one postcard at a time
     </h1>
 
-    <p class="lead text-muted">
+    <p class="lead text-muted hero-text">
       Explore destinations through real stories
     </p>
 
@@ -97,7 +97,7 @@ if (isset($_GET['action'])) {
   </div>
 
   <!-- VYKORT -->
-  <h4 class="mb-4">Nyinkomna Vykort</h4>
+  <h4 class="mb-4">New postcards</h4>
 
   <div class="row g-4">
 
