@@ -43,7 +43,7 @@ if (isset($_GET['action'])) {
   <!-- HERO -->
   <div class="hero mb-5 text-center">
 
-    <h1 class="display-4 fw-bold">
+    <h1 class="display fw-bold">
       Discover the world, one postcard at a time
     </h1>
 

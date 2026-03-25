@@ -12,10 +12,6 @@ h5,
   font-family: "Noto Serif Display", serif !important;
 }
 
-h1 {
-  font-size: 2rem;
-}
-
 body,
 textarea,
 p,
@@ -317,7 +313,6 @@ a {
 #regform button:hover {
   color: #5b5b5b;
   background-color: #ffaca0;
-  box-shadow: 0 4px 10px 0 #00000035;
 }
 
 .form-control {
@@ -340,7 +335,6 @@ a {
 
 .loggain-drop:hover {
   background-color: #ffaca0;
-  box-shadow: 0 4px 10px 0 #00000035;
 }
 
 .logga-in,
@@ -354,7 +348,6 @@ a {
 .logga-in:hover {
   background-color: #ffaca0;
   color:#1f4e5f;
-  box-shadow: 0 4px 10px 0 #00000035;
 }
 
 .dropdown-item {
@@ -382,7 +375,6 @@ a {
 
 .min-sida-btn:hover {
   color: #dceff7;
-  box-shadow: 0 4px 10px 0 #00000035;
 }
 
 .logout-btn {
@@ -392,7 +384,6 @@ a {
 
 .logout-btn:hover {
   background-color: #ffaca0;
-  box-shadow: 0 4px 10px 0 #00000035;
 }
 
 /* Alerts */
