@@ -54,10 +54,10 @@ require_once 'assets/functions/photo.resize.php';
                         <a href="#" class="nav-link ps-5">About us</a>
                     </li>
                     <li class="nav-item"><a href="feed.asia.php" class="nav-link">Discover postcards</a></li>
-                       <li class="nav-item">
+                    <li class="nav-item"><a href="#" class="nav-link">My friends</a></li>
+                        <li class="nav-item">
                     <a href="add_postcard.php" class="nav-link">Create postcard</a>
-                    </li>
-                    <li class="nav-item"><a href="#" class="nav-link">My friends</a></li>';
+                    </li>';
                     } else {
                         echo '
                     <li class="nav-item">
@@ -113,7 +113,7 @@ require_once 'assets/functions/photo.resize.php';
         // Checks whether user is logged in or not
         if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
             echo '
-        <a href="add_postcard.php" class="floating-upload-btn">
+        <a href="add_postcard.php" class="floating-upload-btn cr-postcard-btn">
             <i class="fa-solid fa-plus"></i> Create postcard
         </a>';
         }
