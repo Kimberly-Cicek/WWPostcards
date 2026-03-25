@@ -1,12 +1,5 @@
-<footer class="container text-muted d-flex justify-content-between mt-4">
-    <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam,
-        temporibus.</p>
-    <p>
-        <i class="fab fa-facebook icon-facebook"></i>
-        <i class="fab fa-twitter icon-twitter"></i>
-        <i class="fab fa-instagram icon-instagram"></i>
-        <i class="fab fa-flickr icon-flickr"></i>
-    </p>
+<footer class="text-muted text-center p-3">
+    <p class="text-muted">Contact: <i class="fa-solid fa-phone ps-1"></i> +12 345 67 89 <i class="fa-solid fa-envelope px-1"></i> info@wwpostcards.com</p>
 </footer>
 
 <!-- JQuery -->

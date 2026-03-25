@@ -1,10 +1,14 @@
 body {
-  background-color: #f2f2f2;
-  color: #222;
+  background-color: #dceff7;
+  color: #2f2f2f;
 }
 
-body, button, input, textarea {
-  font-family: 'Playfair Display', serif !important;
+h1, h2, h3, h4, h5, .hero-text {
+  font-family: 'Noto Serif Display', serif !important;
+}
+
+body, textarea, p, button, main, ul, li, a {
+  font-family: 'Noto Sans' , sans-serif !important;
 }
 
 /* Själva kortet */
@@ -144,13 +148,14 @@ body, button, input, textarea {
 }
 
 /*Startsida*/
-body {
-  background: #f3e8d2;
-}
 
 /* Hero */
 .hero {
   text-align: center;
+}
+
+.hero-text {
+  font-size: 1.8rem;
 }
 
 /* Glob */
@@ -243,7 +248,7 @@ body {
 /* Registreringssida */
 
 #regform {
-  background-color: #dff0f6;
+  background-color: #f3e8d2;
   border-radius: 10px;
   max-width: 600px;
 }
@@ -280,6 +285,9 @@ body {
 }
 
 /* Logga in-dropdown */
+.dropdown-menu {
+  background-color: #f3e8d2;
+}
 
 .loggain-drop,
 .loggain-drop:focus,
@@ -334,4 +342,20 @@ body {
 .alert {
   border: 2px solid;
   border-radius: 20px;
+}
+
+/* Header */
+
+header {
+  background-color: #1f4e5f;
+}
+.navbar-nav .nav-link {
+  background-color: #3a8fb7;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #3a8fb7;
+  width: 100%;
 }
