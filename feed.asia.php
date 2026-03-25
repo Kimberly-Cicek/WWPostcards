@@ -33,43 +33,48 @@ $postcards = $stmt->fetchAll();
 ?>
 
 <div class="container mb-4">
-    <form class="row g-3">
-        <div class="col-md-3">
-            <label class="form-label">Land</label>
-            <select class="form-select">
-                <option selected>Alla länder</option>
-                <option>Japan</option>
-                <option>Thailand</option>
-                <option>Sydkorea</option>
-            </select>
-        </div>
+    <div class="filter-box p-4 rounded-4 shadow-sm">
+        <form class="row g-3">
+            <div class="col-md-3">
+                <label for="country" class="form-label filter-label">Land</label>
+                <select id="country" class="form-select custom-select">
+                    <option selected>Alla länder</option>
+                    <option>Japan</option>
+                    <option>Thailand</option>
+                    <option>Sydkorea</option>
+                </select>
+            </div>
 
-        <div class="col-md-3">
-            <label class="form-label">Stad</label>
-            <select class="form-select">
-                <option selected>Alla städer</option>
-                <option>Tokyo</option>
-                <option>Bangkok</option>
-                <option>Seoul</option>
-            </select>
-        </div>
+            <div class="col-md-3">
+                <label for="city" class="form-label filter-label">Stad</label>
+                <select id="city" class="form-select custom-select">
+                    <option selected>Alla städer</option>
+                    <option>Tokyo</option>
+                    <option>Bangkok</option>
+                    <option>Seoul</option>
+                </select>
+            </div>
 
-        <div class="col-md-3">
-            <label class="form-label">Datum</label>
-            <select class="form-select">
-                <option selected>Senaste först</option>
-                <option>Äldsta först</option>
-            </select>
-        </div>
+            <div class="col-md-3">
+                <label for="date" class="form-label filter-label">Datum</label>
+                <select id="date" class="form-select custom-select">
+                    <option selected>Senaste först</option>
+                    <option>Äldsta först</option>
+                    <option>Denna månad</option>
+                    <option>Detta år</option>
+                </select>
+            </div>
 
-        <div class="col-md-3 d-flex align-items-end">
-            <button type="button" class="btn btn-dark w-100">Filtrera</button>
-        </div>
-    </form>
+            <div class="col-md-3 d-flex align-items-end">
+                <button type="button" class="btn filter-btn w-100">Filtrera</button>
+            </div>
+        </form>
+    </div>
 </div>
 
+
 <div class="container py-5">
-    <h1 class="h2 mb-4">Vykort från Asien</h1>
+    <h1 class="h2 mb-4">Postcards from Asia</h1>
 
     <?php if ($postcards): ?>
         <div class="row g-4">
