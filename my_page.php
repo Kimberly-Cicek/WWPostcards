@@ -1,7 +1,7 @@
 <?php
-
-require_once 'assets/config/db.php';
 require_once 'assets/includes/header.php';
+require_once 'assets/config/db.php';
+
 
 if (!isset($_SESSION['user_id'])) {
     die('Du måste vara inloggad.');

@@ -1,6 +1,7 @@
 <?php
-require_once 'assets/config/db.php';
 require_once 'assets/includes/header.php';
+require_once 'assets/config/db.php';
+
 
 $continent = 'Asien';
 

@@ -1,7 +1,7 @@
 <?php
+require_once 'assets/includes/header.php';
 require_once 'assets/config/db.php';            
 require_once 'assets/functions/register-user.php';
-require_once 'assets/includes/header.php';
 ?>
 <main>
     <!--Alert för lyckad registrering-->
