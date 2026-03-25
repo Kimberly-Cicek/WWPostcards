@@ -1,6 +1,6 @@
 <?php
 // Defines information for database connection
-define('DB_HOST', 'mysql');
+define('DB_HOST', 'localhost');
 define('DB_NAME', 'WWPostcards');
 define('DB_USER', 'root');
 define('DB_PASS', 'root');
