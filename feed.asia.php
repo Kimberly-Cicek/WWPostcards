@@ -41,8 +41,8 @@ $postcards = $stmt->fetchAll();
 <main>
     <div class="container mt-4 mb-4">
         <div class="filter-box p-4 rounded-4 shadow-sm">
-            <form class="row g-3">
-                <div class="col-md-3">
+            <form class="row g-3 align-items-end">
+                <div class="col">
                     <label class="form-label filter-label">Continent</label>
                     <select class="form-select custom-select">
                         <option selected>Asia</option>
@@ -55,7 +55,7 @@ $postcards = $stmt->fetchAll();
                     </select>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col">
                     <label class="form-label filter-label">Country</label>
                     <select class="form-select custom-select">
                         <option selected>All countries</option>
@@ -65,7 +65,7 @@ $postcards = $stmt->fetchAll();
                     </select>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col">
                     <label class="form-label filter-label">City</label>
                     <select class="form-select custom-select">
                         <option selected>All cities</option>
@@ -75,7 +75,7 @@ $postcards = $stmt->fetchAll();
                     </select>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col">
                     <label class="form-label filter-label">Date</label>
                     <select class="form-select custom-select">
                         <option selected>Latest</option>
@@ -85,10 +85,9 @@ $postcards = $stmt->fetchAll();
                     </select>
                 </div>
 
-                <div class="col-12 text-center mt-3">
-                    <button type="button" class="btn filter-btn px-4">Filter</button>
+                <div class="col-auto">
+                    <button type="button" class="btn filter-btn">Filter</button>
                 </div>
-
             </form>
         </div>
     </div>
