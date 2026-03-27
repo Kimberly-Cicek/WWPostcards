@@ -124,7 +124,7 @@ $postcards = $stmt->fetchAll();
                                     </div>
 
                                     <p class="postcard-date">
-                                        Publicerad: <?= htmlspecialchars($row['created_at'] ?? '') ?>
+                                        Published: <?= htmlspecialchars($row['created_at'] ?? '') ?>
                                     </p>
 
                                 </div>
