@@ -1,4 +1,4 @@
-<footer class="text-muted text-center p-3">
+<footer class="text-muted text-center p-3 mt-4">
     <p class="text-muted">Contact: <i class="fa-solid fa-phone ps-1"></i> +12 345 67 89 <i class="fa-solid fa-envelope px-1"></i> info@wwpostcards.com</p>
 </footer>
 
@@ -10,4 +10,5 @@
 <!-- JCrop JS -->
 <script src="assets/js/jcrop.min.js"></script>
 <script src="assets/js/resize.js"></script>
+</div>
 </body>

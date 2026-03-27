@@ -21,7 +21,7 @@ $stmt->execute([
 
 $postcards = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
-
+<main>
 <div class="container mb-4">
     <div class="filter-box p-4 rounded-4 shadow-sm">
         <form class="row g-3">
@@ -125,6 +125,7 @@ $postcards = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>
     <?php endif; ?>
 </div>
+</main>
 
 <?php
 require_once 'assets/includes/footer.php';

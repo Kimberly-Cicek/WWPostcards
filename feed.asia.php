@@ -6,7 +6,7 @@ require_once 'assets/config/db.php';
 $continent = 'Asien';
 
 /* =========================
-   SPARA KOMMENTAR
+   SAVE COMMENT
 ========================= */
 if (isset($_POST['comment'], $_POST['postcard_id'])) {
     $stmt = $dbh->prepare("INSERT INTO comments (postcard_id, text) VALUES (?, ?)");
@@ -17,7 +17,7 @@ if (isset($_POST['comment'], $_POST['postcard_id'])) {
 }
 
 /* =========================
-   RADERA KOMMENTAR
+   DELETE COMMENT
 ========================= */
 if (isset($_POST['delete_id'])) {
     $stmt = $dbh->prepare("DELETE FROM comments WHERE id = ?");
@@ -25,13 +25,13 @@ if (isset($_POST['delete_id'])) {
 }
 
 /* =========================
-   HÄMTA VYKORT
+   GET POSTCARDS
 ========================= */
 $stmt = $dbh->prepare("SELECT * FROM postcard WHERE continent = :continent ORDER BY created_at DESC");
 $stmt->execute(['continent' => $continent]);
 $postcards = $stmt->fetchAll();
 ?>
-
+<main>
 <div class="container mb-4">
     <div class="filter-box p-4 rounded-4 shadow-sm">
         <form class="row g-3">
@@ -120,7 +120,7 @@ $postcards = $stmt->fetchAll();
 
 
                         <!-- =========================
-                             KOMMENTARER
+                             COMMENTS
                         ========================= -->
 
                         <div class="p-3">
@@ -143,7 +143,7 @@ $postcards = $stmt->fetchAll();
                             <?php endforeach; ?>
 
                             <!-- =========================
-                                 FORMULÄR
+                                 FORM
                             ========================= -->
 
                             <button class="btn btn-outline-dark btn-sm mt-2"
@@ -168,5 +168,6 @@ $postcards = $stmt->fetchAll();
         <div class="alert alert-info">Det finns inga vykort från Asien ännu.</div>
     <?php endif; ?>
 </div>
+</main>
 
 <?php require_once 'assets/includes/footer.php'; ?>

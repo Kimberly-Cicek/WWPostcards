@@ -36,7 +36,8 @@ require_once 'assets/functions/photo.resize.php';
 </head>
 
 <body>
-    <header class="mb-5">
+    <div class="page-container">
+    <header class="mb-2">
         <div class="container">
             <nav class="navbar navbar-expand-md">
                 <a href="index.htm" class="navbar-brand">
@@ -87,12 +88,12 @@ require_once 'assets/functions/photo.resize.php';
                         <div class="dropdown-menu dropdown-menu-end p-4 px-5">
                             <form action="index.php" method="post">
                                 <div class="mb-2">
-                                    <label for="email" class="form-label sr-only"></label>
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                                    <label for="login-email" class="form-label sr-only"></label>
+                                    <input type="email" class="form-control" id="login-email" name="email" placeholder="Email">
                             </div>
                             <div class="mb-3">
-                                    <label for="password" class="form-label sr-only"></label>
-                                    <input type="password" class="form-control" id="password"
+                                    <label for="login-password" class="form-label sr-only"></label>
+                                    <input type="password" class="form-control" id="login-password"
                                         name="password" placeholder="Password">
                                 </div>
                                 <div class="text-center">

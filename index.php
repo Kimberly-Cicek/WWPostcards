@@ -41,7 +41,7 @@ if (isset($_GET['action'])) {
 <div class="container py-4">
 
   <!-- HERO -->
-  <div class="hero mb-5 text-center">
+  <div class="hero text-center">
 
     <h1 class="display fw-bold">
       Discover the world, one postcard at a time
@@ -51,18 +51,18 @@ if (isset($_GET['action'])) {
       Explore destinations through real stories
     </p>
 
-    <!-- KARTA -->
-    <div class="map-container mt-4">
+    <!-- MAP -->
+    <div class="map-container">
 
       <img src="https://uploads.onecompiler.io/442ssbwmc/44fzyrgz7/Jordglogen.png" class="globe" alt="Jordglob">
 
-    <!-- ASIA (klickbar - första pinnen) -->
+    <!-- ASIA (clickable - first pin) -->
 <a href="feed.asia.php" class="pin">
     <img src="https://uploads.onecompiler.io/442ssbwmc/44fzyrgz7/Pin.png">
     <div class="popup">ASIA</div>
 </a>
 
-<!-- EUROPE (inte klickbar) -->
+<!-- EUROPE (not clickable) -->
 <div class="pin2">
     <img src="https://uploads.onecompiler.io/442ssbwmc/44fzyrgz7/Pin.png">
     <div class="popup">EUROPE</div>
@@ -96,7 +96,7 @@ if (isset($_GET['action'])) {
 
   </div>
 
-  <!-- VYKORT -->
+  <!-- POSTCARDS -->
   <h4 class="mb-4">New postcards</h4>
 
   <div class="row g-4">
