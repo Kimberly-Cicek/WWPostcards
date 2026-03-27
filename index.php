@@ -108,7 +108,7 @@ if (isset($_GET['action'])) {
 
         <div class="col-md-6"> <!-- Kolumn som tar upp halva bredden på medium och större skärmar -->
           <div class="postcard-image-wrap"> <!-- Wrapper för bilden som gör att den tar upp hela höjden och har en minsta höjd -->
-            <img src="uploads/Baliberg.jpg" class="postcard-image" alt="Indonesien"> 
+            <img src="images/Baliberg.jpg" class="postcard-image" alt="Indonesien"> 
                
           </div>
         </div>
@@ -141,7 +141,7 @@ if (isset($_GET['action'])) {
 
         <div class="col-md-6"> <!-- Kolumn som tar upp halva bredden på medium och större skärmar -->
           <div class="postcard-image-wrap"> <!-- Wrapper för bilden som gör att den tar upp hela höjden och har en minsta höjd -->
-            <img src="uploads/Parisbild.jpg" class="postcard-image"  alt="Paris">
+            <img src="images/Parisbild.jpg" class="postcard-image"  alt="Paris">
                  
           </div>
         </div>
@@ -174,7 +174,7 @@ if (isset($_GET['action'])) {
 
         <div class="col-md-6">
           <div class="postcard-image-wrap">
-            <img src="uploads/Sydamerika.jpg" class="postcard-image" alt="sydamerika">
+            <img src="images/Sydamerika.jpg" class="postcard-image" alt="sydamerika">
                 
           </div>
         </div>
@@ -207,7 +207,7 @@ if (isset($_GET['action'])) {
 
         <div class="col-md-6">
           <div class="postcard-image-wrap">
-            <img src="uploads/USAroadtrip.jpg" class="postcard-image" alt="USA">
+            <img src="images/USAroadtrip.jpg" class="postcard-image" alt="USA">
             
           </div>
         </div>
