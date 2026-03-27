@@ -37,13 +37,13 @@ You have left some fields empty!
             <h2 class="mb-5 text-center">Hello new member!</h2>
             <p>Fill in your email and password to register.</p>
             <form action="register.php" method="post">
-                <label for="email" class="form-label">Email:</label>
+                <label for="register-email" class="form-label">Email:</label>
                 <div>
-                    <input type="email" class="form-control" id="email" name="email">
+                    <input type="email" class="form-control" id="register-email" name="email">
                 </div>
                 <div>
-                    <label for="password" class="form-label mt-2">Password:</label>
-                    <input type="password" class="form-control" id="password"
+                    <label for="register-password" class="form-label mt-2">Password:</label>
+                    <input type="password" class="form-control" id="register-password"
                         name="password">
                 </div>
                 <div class="text-center">
