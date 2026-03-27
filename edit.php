@@ -1,6 +1,5 @@
 <?php
-
-require_once 'assets/config/db.php';
+require_once 'assets/includes/header.php';
 
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
@@ -84,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $postcard['city'] = $city;
 }
 
-require_once 'assets/includes/header.php';
+
 
 ?>
 
