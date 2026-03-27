@@ -1,6 +1,6 @@
 <?php
 
-require_once 'assets/includes/header.php';
+session_start();
 require_once 'assets/config/db.php';
 
 
@@ -85,6 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 ?>
+<?php require_once 'assets/includes/header.php'; ?>
 <main>
 
 <div class="container py-5">
