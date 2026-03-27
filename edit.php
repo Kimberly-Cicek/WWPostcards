@@ -1,5 +1,8 @@
 <?php
+
 require_once 'assets/includes/header.php';
+require_once 'assets/config/db.php';
+
 
 
 if (!isset($_SESSION['user_id'])) {
@@ -79,7 +82,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $postcard['country'] = $country;
     $postcard['city'] = $city;
 }
-
 
 
 ?>
