@@ -1,3 +1,4 @@
+/* Basic appearance for the whole site */
 body {
   background-color: #dceff7;
   color: #1f4e5f !important;
@@ -40,7 +41,7 @@ a {
 }
 
 
-/* Själva kortet */
+/* The card itself */
 .postcard-card {
   background-color: #fff;
   border: 1px solid #dcdcdc;
@@ -51,13 +52,13 @@ a {
   flex-direction: column;
 }
 
-/* Gör att båda sidorna i kortet får samma grundhöjd */
+/* Makes both sides of the card have the same base-height */
 
 .postcard-card .row {
   flex: 1;
 }
 
-/* Bilddelen */
+/* Image side */
 .postcard-image-wrap {
   height: 100%;
 }
@@ -70,7 +71,7 @@ a {
   border-radius: 0;
 }
 
-/* Högersidan av vykortet */
+/* Right side of postcard */
 .postcard-back {
   position: relative;
   background-color: #fff;
@@ -80,21 +81,21 @@ a {
   height: 100%;
 }
 
-/* Rubrik */
+/* Title */
 .postcard-title {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
   padding-right: 5rem;
 }
 
-/* Plats */
+/* Location */
 .postcard-location {
   color: #666;
   margin-bottom: 1rem;
   font-size: 0.95rem;
 }
 
-/* Meddelande */
+/* Message */
 .postcard-message {
   line-height: 1.8;
   padding-top: 0.25rem;
@@ -105,14 +106,14 @@ a {
       #dcdcdc 28px);
 }
 
-/* Datum */
+/* Date */
 .postcard-date {
   margin-top: 1rem;
   font-size: 0.85rem;
   color: #777;
 }
 
-/* Frimärksruta */
+/* Stamp-box */
 .stamp-box {
   position: absolute;
   top: 18px;
@@ -139,7 +140,7 @@ a {
   gap: 10px;
 }
 
-/* Fejk-kommentarer */
+/* Fake comments */
 .fake-comments {
   border-top: 1px solid #ddd;
   padding-top: 1rem;
@@ -151,7 +152,7 @@ a {
   color: #555;
 }
 
-/* Flytande uppladdningsknapp */
+/* Floating upload button */
 .floating-upload-btn {
   position: fixed;
   bottom: 30px;
@@ -175,7 +176,7 @@ a {
 }
 
 
-/*Startsida*/
+/*Start page*/
 
 /* Hero */
 .hero {
@@ -186,7 +187,7 @@ a {
   font-size: 1.8rem;
 }
 
-/* Glob */
+/* Globe */
 .globe {
   max-width: 1000px;
 }
@@ -209,7 +210,7 @@ a {
   cursor: pointer;
 }
 
-/* Pin positionering */
+/* Pin positioning */
 .pin {
   top: 30%;
   left: 70%;
@@ -240,7 +241,7 @@ a {
   left: 79%;
 }
 
-/* Pin bild */
+/* Pin image */
 .pin img,
 .pin2 img,
 .pin3 img,
@@ -252,7 +253,7 @@ a {
   filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
 }
 
-/* Hover effekt */
+/* Hover effect */
 .pin:hover img,
 .pin2:hover img,
 .pin3:hover img,
@@ -280,7 +281,7 @@ a {
   white-space: nowrap;
 }
 
-/* Visa popup */
+/* Show popup */
 .pin:hover .popup,
 .pin2:hover .popup,
 .pin3:hover .popup,
@@ -302,7 +303,7 @@ a {
   object-fit: cover;
 }
 
-/* Registreringssida */
+/* Registration page */
 
 #regform {
   background-color: #f3e8d2;
@@ -340,7 +341,7 @@ a {
   border: 2px solid #1f4e5f;
 }
 
-/* Logga in-dropdown */
+/* Log in-dropdown */
 .dropdown-menu {
   background-color: #f3e8d2;
 }
@@ -386,7 +387,7 @@ a {
   color: #1f4e5f;
 }
 
-/* Inloggad header*/
+/* Logged in-header*/
 
 .min-sida-btn {
   font-size: 2rem;
@@ -448,7 +449,7 @@ header {
   color: white;
 }
 
-/* fejk-filtrering */
+/* Fake-filtration */
 
 .filter-box {
   background-color: #e9dcc6;
