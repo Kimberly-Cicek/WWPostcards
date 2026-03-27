@@ -22,12 +22,25 @@ $stmt->execute([
 $postcards = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <main>
-    <div class="container mb-4">
+    <div class="container mt-4 mb-4">
         <div class="filter-box p-4 rounded-4 shadow-sm">
-            <form class="row g-3">
-                <div class="col-md-3">
-                    <label for="country" class="form-label filter-label">Country</label>
-                    <select id="country" class="form-select custom-select">
+            <form class="row g-3 align-items-end">
+                <div class="col">
+                    <label class="form-label filter-label">Continent</label>
+                    <select class="form-select custom-select">
+                        <option selected>Asia</option>
+                        <option>Europe</option>
+                        <option>South Amercia</option>
+                        <option>North Amercia</option>
+                        <option>Africa</option>
+                        <option>Oceania</option>
+                        <option>Antarctica</option>
+                    </select>
+                </div>
+
+                <div class="col">
+                    <label class="form-label filter-label">Country</label>
+                    <select class="form-select custom-select">
                         <option selected>All countries</option>
                         <option>Japan</option>
                         <option>Thailand</option>
@@ -35,9 +48,9 @@ $postcards = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     </select>
                 </div>
 
-                <div class="col-md-3">
-                    <label for="city" class="form-label filter-label">City</label>
-                    <select id="city" class="form-select custom-select">
+                <div class="col">
+                    <label class="form-label filter-label">City</label>
+                    <select class="form-select custom-select">
                         <option selected>All cities</option>
                         <option>Tokyo</option>
                         <option>Bangkok</option>
@@ -45,9 +58,9 @@ $postcards = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     </select>
                 </div>
 
-                <div class="col-md-3">
-                    <label for="date" class="form-label filter-label">Date</label>
-                    <select id="date" class="form-select custom-select">
+                <div class="col">
+                    <label class="form-label filter-label">Date</label>
+                    <select class="form-select custom-select">
                         <option selected>Latest</option>
                         <option>Oldest</option>
                         <option>This month</option>
@@ -55,8 +68,8 @@ $postcards = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     </select>
                 </div>
 
-                <div class="col-md-3 d-flex align-items-end">
-                    <button type="button" class="btn filter-btn w-100">Filter</button>
+                <div class="col-auto">
+                    <button type="button" class="btn filter-btn">Filter</button>
                 </div>
             </form>
         </div>
