@@ -5,7 +5,7 @@ require_once 'assets/config/db.php';
 $continent = 'Asien';
 
 /* =========================
-   SPARA KOMMENTAR
+   SAVE COMMENT
 ========================= */
 if (isset($_POST['comment'], $_POST['postcard_id']) && isset($_SESSION['user_id'])) {
     $stmt = $dbh->prepare("INSERT INTO comments (postcard_id, user_id, text) VALUES (?, ?, ?)");
@@ -17,7 +17,7 @@ if (isset($_POST['comment'], $_POST['postcard_id']) && isset($_SESSION['user_id'
 }
 
 /* 
-   RADERA KOMMENTAR
+   DELETE COMMENT
 */
 if (isset($_POST['delete_id']) && isset($_SESSION['user_id'])) {
     $stmt = $dbh->prepare("DELETE FROM comments WHERE id = ? AND user_id = ?");
@@ -28,7 +28,7 @@ if (isset($_POST['delete_id']) && isset($_SESSION['user_id'])) {
 }
 
 /* 
-   HÄMTA VYKORT
+   GET POSTCARD
  */
 $stmt = $dbh->prepare("SELECT * FROM postcard WHERE continent = :continent ORDER BY created_at DESC");
 $stmt->execute(['continent' => $continent]);
@@ -81,7 +81,7 @@ $postcards = $stmt->fetchAll();
 </div>
 
 <!-- 
-     VYKORT
+     POSTCORD
  -->
 <div class="container py-5">
     <h1 class="h2 mb-4">Postcards from Asia</h1>
@@ -132,73 +132,66 @@ $postcards = $stmt->fetchAll();
 
                         </div>
 
-                        <!-- KNAPP -->
+                        <!-- BUTTON -->
                         <div class="p-3">
                             <button class="btn btn-outline-dark btn-sm w-100"
                                 data-bs-toggle="modal"
                                 data-bs-target="#commentsModal<?= $row['id'] ?>">
-                                Visa kommentarer / Kommentera
+                                Show comments / Comment
                             </button>
                         </div>
 
                     </div>
 
                 </div>
-
-                <!--
-                     MODAL (Ruta i mitten av skärmen som visar kommentarer och formulär)
-                -->
                 <div class="modal fade" id="commentsModal<?= $row['id'] ?>" tabindex="-1">
-                    <div class="modal-dialog"> <!-- Modal dialog som centrerar innehållet -->
-                        <div class="modal-content"> <!-- Modal innehåll -->
-
-                            <div class="modal-header"> <!-- Modal header med titel och stäng-knapp -->
-                                <h5 class="modal-title">Kommentarer</h5>
+                    <div class="modal-dialog"> 
+                        <div class="modal-content"> 
+                            <div class="modal-header"> 
+                                <h5 class="modal-title">Comments</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                             </div>
 
                             <div class="modal-body">
 
                                 <!-- FORM -->
-                                <form method="post" class="mb-3"> <!-- Form för att skicka kommentar -->
-                                    <input type="hidden" name="postcard_id" value="<?= $row['id'] ?>"> <!-- Skickar vykortets id som parameter för att veta vilken kommentar som hör till vilket vykort -->
+                                <form method="post" class="mb-3"> 
+                                    <input type="hidden" name="postcard_id" value="<?= $row['id'] ?>"> <!-- Sends the cards id as parameter to know which comment belongs to which user -->
 
-                                    <?php if (!isset($_SESSION['user_id'])): ?> <!-- Kollar om användaren är inloggad, om inte så visas en textarea som är disabled-->
+                                    <?php if (!isset($_SESSION['user_id'])): ?> <!-- Checks whether user is logged in -->
                                         <textarea class="form-control mb-2" disabled
                                             placeholder="Du måste vara inloggad för att kommentera"></textarea>
                                     <?php else: ?>
                                         <textarea name="comment" class="form-control mb-2"
-                                            placeholder="Skriv kommentar..."></textarea> <!-- Textarea för att skriva kommentar, visas endast om användaren är inloggad -->
+                                            placeholder="Write comment..."></textarea> <!-- Only shows if user is logged in -->
                                         <button class="btn btn-success btn-sm">Skicka</button>
-                                    <?php endif; ?> <!-- Kollar om användaren är inloggad, om inte så visas en textarea som är disabled-->
+                                    <?php endif; ?> <!-- Checks whether user is logged in-->
                                 </form>
 
-                                <!-- COMMENTS (koppling till databasen) -->
+                                <!-- COMMENTS (connection to database) -->
                                 <?php
-                                $stmt = $dbh->prepare("SELECT * FROM comments WHERE postcard_id = ?"); /* Hämtar alla kommentarer som har samma postcard_id som det aktuella vykortet */
-                                $stmt->execute([$row['id']]); /* Kör frågan och skickar in vykortets id som parameter */
-                                $comments = $stmt->fetchAll(); /* Hämtar alla resultat och sparar i $comments */
+                                $stmt = $dbh->prepare("SELECT * FROM comments WHERE postcard_id = ?"); /* Get all comments with the same postcard_id as the current postcard */
+                                $stmt->execute([$row['id']]); 
+                                $comments = $stmt->fetchAll(); /* Fetches all results and saves in $comments */
                                 ?>
 
-                                <?php if ($comments): ?> <!-- Kollar om det finns några kommentarer -->
-                                    <?php foreach ($comments as $comment): ?> <!-- Loopar igenom alla kommentarer och visar dem -->
-                                        <div class="border rounded p-2 mb-2"> <!-- Visar varje kommentar i en box med runda hörn och en liten marginal -->
+                                <?php if ($comments): ?> <!-- Checks if there are any comments -->
+                                    <?php foreach ($comments as $comment): ?> 
+                                        <div class="border rounded p-2 mb-2"> 
                                             💬 <?= htmlspecialchars($comment['text']) ?>
 
-                                            <?php if (isset($_SESSION['user_id']) && $_SESSION['user_id'] == $comment['user_id']): ?> <!-- Visar radera-knappen endast för den som har skrivit kommentaren -->
-                                                <form method="post" style="display:inline;"> <!-- Form för att radera kommentar -->
-                                                    <input type="hidden" name="delete_id" value="<?= $comment['id'] ?>"> <!-- Skickar kommentaren id som parameter för att veta vilken kommentar som ska raderas -->
-                                                    <button class="btn btn-danger btn-sm">Radera</button> <!-- Radera-knapp -->
+                                            <?php if (isset($_SESSION['user_id']) && $_SESSION['user_id'] == $comment['user_id']): ?> 
+                                                <form method="post" style="display:inline;"> 
+                                                    <input type="hidden" name="delete_id" value="<?= $comment['id'] ?>"> 
+                                                    <button class="btn btn-danger btn-sm">Delete</button> 
                                                 </form>
-                                            <?php endif; ?> <!-- Stänger if-satsen för att visa radera-knappen endast för den som har skrivit kommentaren -->
-                                        </div> <!-- Visar varje kommentar i en box med runda hörn och en liten marginal -->
-                                    <?php endforeach; ?> <!-- Loopar igenom alla kommentarer och visar dem -->
-                                <?php else: ?> <!-- Om det inte finns några kommentarer -->
-                                    <p class="text-muted">Inga kommentarer ännu</p> <!-- Visas om det inte finns några kommentarer -->
-                                <?php endif; ?> <!-- Stänger if-satsen för att kolla om det finns några kommentarer -->
-
+                                            <?php endif; ?> <!-- Closes the if-statement and only shows the comment to user who posted it -->
+                                        </div> 
+                                    <?php endforeach; ?> 
+                                <?php else: ?> 
+                                    <p class="text-muted">No comments yet</p> 
+                                <?php endif; ?> 
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -206,7 +199,7 @@ $postcards = $stmt->fetchAll();
             <?php endforeach; ?>
         </div>
     <?php else: ?>
-        <div class="alert alert-info">Det finns inga vykort från Asien ännu.</div> <!-- Visas om det inte finns några vykort från Asien -->
+        <div class="alert alert-info">There are no postcards from Asia yet.</div> <!-- Shows if there are no postcards from Asia -->
     <?php endif; ?>
 </div>
 
