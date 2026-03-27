@@ -63,7 +63,7 @@ $postcards = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </div>
 
     <div class="container py-5">
-        <div class="d-flex justify-content-between align-items-center mb-4">
+        <div class="d-flex justify-content-center mb-4">
             <h1 class="h2">My postcards</h1>
         </div>
 
