@@ -88,85 +88,85 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <?php require_once 'assets/includes/header.php'; ?>
 <main>
 
-<div class="container py-5">
-    <h1 class="mb-4">Redigera vykort</h1>
+    <div class="container py-5">
+        <h1 class="mb-4">Edit postcard</h1>
 
-    <?php if (!empty($error)): ?>
-        <div class="alert alert-danger">
-            <?= htmlspecialchars($error) ?>
-        </div>
-    <?php endif; ?>
+        <?php if (!empty($error)): ?>
+            <div class="alert alert-danger">
+                <?= htmlspecialchars($error) ?>
+            </div>
+        <?php endif; ?>
 
-    <div class="row">
-        <div class="col-12 col-lg-8">
-            <div class="card shadow-sm p-4">
-                <form method="post" action="">
-                    <div class="mb-3">
-                        <label for="title" class="form-label">Titel</label>
-                        <input
-                            type="text"
-                            class="form-control"
-                            id="title"
-                            name="title"
-                            value="<?= htmlspecialchars($postcard['title'] ?? '') ?>">
-                    </div>
+        <div class="row">
+            <div class="col-12 col-lg-8">
+                <div class="card shadow-sm p-4">
+                    <form method="post">
+                        <div class="mb-3">
+                            <label for="title" class="form-label">Title</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="title"
+                                name="title"
+                                value="<?= htmlspecialchars($postcard['title'] ?? '') ?>">
+                        </div>
 
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Meddelande</label>
-                        <textarea
-                            class="form-control"
-                            id="message"
-                            name="message"
-                            rows="6"><?= htmlspecialchars($postcard['message'] ?? '') ?></textarea>
-                    </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea
+                                class="form-control"
+                                id="message"
+                                name="message"
+                                rows="6"><?= htmlspecialchars($postcard['message'] ?? '') ?></textarea>
+                        </div>
 
-                    <div class="mb-3">
-                        <label for="continent" class="form-label">Kontinent</label>
-                        <input
-                            type="text"
-                            class="form-control"
-                            id="continent"
-                            name="continent"
-                            value="<?= htmlspecialchars($postcard['continent'] ?? '') ?>">
-                    </div>
+                        <div class="mb-3">
+                            <label for="continent" class="form-label">Continent</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="continent"
+                                name="continent"
+                                value="<?= htmlspecialchars($postcard['continent'] ?? '') ?>">
+                        </div>
 
-                    <div class="mb-3">
-                        <label for="country" class="form-label">Land</label>
-                        <input
-                            type="text"
-                            class="form-control"
-                            id="country"
-                            name="country"
-                            value="<?= htmlspecialchars($postcard['country'] ?? '') ?>">
-                    </div>
+                        <div class="mb-3">
+                            <label for="country" class="form-label">Country</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="country"
+                                name="country"
+                                value="<?= htmlspecialchars($postcard['country'] ?? '') ?>">
+                        </div>
 
-                    <div class="mb-3">
-                        <label for="city" class="form-label">Stad</label>
-                        <input
-                            type="text"
-                            class="form-control"
-                            id="city"
-                            name="city"
-                            value="<?= htmlspecialchars($postcard['city'] ?? '') ?>">
-                    </div>
+                        <div class="mb-3">
+                            <label for="city" class="form-label">City</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="city"
+                                name="city"
+                                value="<?= htmlspecialchars($postcard['city'] ?? '') ?>">
+                        </div>
 
-                    <div class="mb-3">
-                        <p class="mb-2"><strong>Nuvarande bild:</strong></p>
-                        <img
-                            src="<?= htmlspecialchars($postcard['image_path'] ?? '') ?>"
-                            alt="<?= htmlspecialchars($postcard['title'] ?? '') ?>"
-                            style="max-width: 250px; height: auto;">
-                    </div>
+                        <div class="mb-3">
+                            <p class="mb-2"><strong>Current picture:</strong></p>
+                            <img
+                                src="<?= htmlspecialchars($postcard['image_path'] ?? '') ?>"
+                                alt="<?= htmlspecialchars($postcard['title'] ?? '') ?>"
+                                style="max-width: 250px; height: auto;">
+                        </div>
 
-                    <div class="d-flex gap-2">
-                        <button type="submit" class="btn btn-primary">Spara ändringar</button>
-                        <a href="my_page.php" class="btn btn-secondary">Avbryt</a>
-                    </div>
-                </form>
+                        <div class="d-flex gap-2">
+                            <button type="submit" class="btn btn-primary">Save changes</button>
+                            <a href="my_page.php" class="btn btn-secondary">Cancel</a>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
 </main>
 
 <?php
