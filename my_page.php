@@ -121,7 +121,7 @@ $postcards = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             </div>
 
 
-                            </form>
+
 
                         </div>
                     </div>
