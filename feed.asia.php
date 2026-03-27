@@ -160,7 +160,7 @@ $postcards = $stmt->fetchAll();
 
                                     <?php if (!isset($_SESSION['user_id'])): ?> <!-- Checks whether user is logged in -->
                                         <textarea class="form-control mb-2" disabled
-                                            placeholder="Du måste vara inloggad för att kommentera"></textarea>
+                                            placeholder="Log in to comment"></textarea>
                                     <?php else: ?>
                                         <textarea name="comment" class="form-control mb-2"
                                             placeholder="Write comment..."></textarea> <!-- Only shows if user is logged in -->
