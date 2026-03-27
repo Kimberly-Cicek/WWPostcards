@@ -134,7 +134,7 @@ $postcards = $stmt->fetchAll();
 
                         <!-- BUTTON -->
                         <div class="p-3">
-                            <button class="btn btn-outline-dark btn-sm w-100"
+                            <button class="btn btn-primary btn-sm w-100"
                                 data-bs-toggle="modal"
                                 data-bs-target="#commentsModal<?= $row['id'] ?>">
                                 Show comments / Comment
