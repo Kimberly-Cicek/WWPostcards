@@ -98,8 +98,8 @@ require_once 'assets/includes/header.php';
     </div>
 
     <!-- POSTCARDS -->
-    <h2 class="mb-4">New postcards</h2>
-    <div class="row g-4">
+    <h2 class="mb-4 text-center">New postcards</h2>
+    <div class="row g-4 px-4">
 
       <!-- 1 -->
       <div class="col-12 col-lg-6 d-flex">
