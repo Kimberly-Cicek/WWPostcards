@@ -37,20 +37,21 @@ require_once 'assets/functions/photo.resize.php';
 
 <body>
     <div class="page-container">
-    <header class="mb-2">
-        <div class="container">
-            <nav class="navbar navbar-expand-md">
-                <a href="index.htm" class="navbar-brand">
+        <header class="mb-2">
+            <div class="container">
+                <nav class="navbar navbar-expand-md">
+                    <a href="index.htm" class="navbar-brand">
 
-                </a>
+                    </a>
 
-                <a href="index.php">
-                    <img src="images/postcardlogga.png" alt="Logo" width="150" class="mb-3">
-                </a>
-                <ul class="navbar-nav me-auto">
-                    <?php
-                    if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
-                        echo '
+                    <a href="index.php">
+                        <img src="images/postcardlogga.png" alt="Logo" width="150" class="mb-3">
+                    </a>
+                    <ul class="navbar-nav me-auto">
+                        <!-- Header for logged in user -->
+                        <?php
+                        if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
+                            echo '
                                     
                     <li class="nav-item">
                         <a href="#" class="nav-link ps-5">About us</a>
@@ -60,26 +61,27 @@ require_once 'assets/functions/photo.resize.php';
                         <li class="nav-item">
                     <a href="add_postcard.php" class="nav-link">Create postcard</a>
                     </li>';
-                    } else {
-                        echo '
+                        } else { //Header for logged out user
+                            echo '
                     <li class="nav-item">
                         <a href="#" class="nav-link ps-5">About us</a>
                     </li>
                     <li class="nav-item"><a href="feed.asia.php" class="nav-link">Discover postcards</a></li>
                        <li class="nav-item">';
-                    }
-                    ?>
-                </ul>
-                <?php
-                // Checks whether user is logged in or not
-                if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
-                    echo '
+                        }
+                        ?>
+                    </ul>
+                    <?php
+                    // Checks whether user is logged in or not
+                    if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
+                        echo '
+    <!-- Header for logged in user -->
     <a href="my_page.php" class="btn me-2">
     <i class="fa-solid fa-user min-sida-btn"></i></a>
     <a href="logout.php" class="btn rounded-pill py-2 px-4 logout-btn">Logout</a>';
-                } else {
-                    echo
-                    ' <!-- Button for login -->
+                    } else {
+                        echo
+                        ' <!-- Button for login with dropdown -->
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
                         <button class="btn dropdown-toggle rounded-pill py-2 px-4 loggain-drop" data-bs-toggle="dropdown" type="button">
@@ -106,18 +108,18 @@ require_once 'assets/functions/photo.resize.php';
                         </div>
                     </li>
                 </ul>';
-                } ?>
+                    } ?>
 
-            </nav>
-        </div>
+                </nav>
+            </div>
 
-        <?php
-        // Checks whether user is logged in or not
-        if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
-            echo '
+            <?php
+            // Checks whether user is logged in or not
+            if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
+                echo '
         <a href="add_postcard.php" class="floating-upload-btn cr-postcard-btn">
             <i class="fa-solid fa-plus"></i> Create postcard
         </a>';
-        }
-        ?>
-    </header>
+            }
+            ?>
+        </header>
