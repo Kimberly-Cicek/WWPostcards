@@ -45,17 +45,17 @@ $postcards = $stmt->fetchAll();
             <div class="col-md-3">
                 <label class="form-label filter-label">Land</label>
                 <select class="form-select custom-select">
-                    <option selected>Alla länder</option>
+                    <option selected>Countries</option>
                     <option>Japan</option>
                     <option>Thailand</option>
-                    <option>Sydkorea</option>
+                    <option>South Korea</option>
                 </select>
             </div>
 
             <div class="col-md-3">
                 <label class="form-label filter-label">Stad</label>
                 <select class="form-select custom-select">
-                    <option selected>Alla städer</option>
+                    <option selected>Cities</option>
                     <option>Tokyo</option>
                     <option>Bangkok</option>
                     <option>Seoul</option>
@@ -65,15 +65,15 @@ $postcards = $stmt->fetchAll();
             <div class="col-md-3">
                 <label class="form-label filter-label">Datum</label>
                 <select class="form-select custom-select">
-                    <option selected>Senaste först</option>
-                    <option>Äldsta först</option>
-                    <option>Denna månad</option>
-                    <option>Detta år</option>
+                    <option selected>Latest</option>
+                    <option>Oldest</option>
+                    <option>This month</option>
+                    <option>This year</option>
                 </select>
             </div>
 
             <div class="col-md-3 d-flex align-items-end">
-                <button type="button" class="btn filter-btn w-100">Filtrera</button>
+                <button type="button" class="btn filter-btn w-100">Filter</button>
             </div>
 
         </form>
