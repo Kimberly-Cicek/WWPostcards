@@ -34,6 +34,18 @@ $postcards = $stmt->fetchAll();
     <div class="container mt-4 mb-4">
         <div class="filter-box p-4 rounded-4 shadow-sm">
             <form class="row g-3">
+                <div class="col-md-3">
+                    <label class="form-label filter-label">Continent</label>
+                    <select class="form-select custom-select">
+                        <option selected>Asia</option>
+                        <option>Europe</option>
+                        <option>South Amercia</option>
+                        <option>North Amercia</option>
+                        <option>Africa</option>
+                        <option>Oceania</option>
+                        <option>Antarctica</option>
+                    </select>
+                </div>
 
                 <div class="col-md-3">
                     <label class="form-label filter-label">Country</label>
@@ -65,8 +77,8 @@ $postcards = $stmt->fetchAll();
                     </select>
                 </div>
 
-                <div class="col-md-3 d-flex align-items-end">
-                    <button type="button" class="btn filter-btn w-100">Filter</button>
+                <div class="col-12 text-center mt-3">
+                    <button type="button" class="btn filter-btn px-4">Filter</button>
                 </div>
 
             </form>
