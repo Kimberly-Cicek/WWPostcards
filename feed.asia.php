@@ -164,7 +164,7 @@ $postcards = $stmt->fetchAll();
                                     <?php else: ?>
                                         <textarea name="comment" class="form-control mb-2"
                                             placeholder="Write comment..."></textarea> <!-- Only shows if user is logged in -->
-                                        <button class="btn btn-success btn-sm">Send</button>
+                                        <button type="submit" class="btn btn-primary">Send</button>
                                     <?php endif; ?> <!-- Checks whether user is logged in-->
                                 </form>
 
