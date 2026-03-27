@@ -104,7 +104,7 @@ $postcards = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                         </div>
 
                                         <p class="postcard-date">
-                                            Publicerad: <?= htmlspecialchars($row['created_at'] ?? '') ?>
+                                            Published: <?= htmlspecialchars($row['created_at'] ?? '') ?>
                                         </p>
                                     </div>
                                 </div>
