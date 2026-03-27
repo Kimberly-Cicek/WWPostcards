@@ -163,8 +163,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
 
                     <div class="d-flex justify-content-center gap-3 mt-4">
-                        <button type="submit" class="btn btn-primary btn-sm">Save changes</button>
-                        <a href="my_page.php" class="btn btn-danger btn-sm">Cancel</a>
+                        <button type="submit" class="btn btn-primary px-4 py-2">Save changes</button>
+                        <a href="my_page.php" class="btn btn-danger px-4 py-2">Cancel</a>
                     </div>
                 </form>
             </div>
