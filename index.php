@@ -5,7 +5,7 @@ require_once 'assets/includes/header.php';
 <main>
 
   <?php
-  // Alerts
+  // Alerts for different log in scenarios
   if (isset($_GET['action'])) {
     switch ($_GET['action']) {
       case 'empty':
@@ -40,7 +40,7 @@ require_once 'assets/includes/header.php';
 
   <div class="container py-4">
 
-    <!-- HERO -->
+    <!-- Hero -->
     <div class="hero mb-5 text-center">
 
       <h1 class="display fw-bold">
@@ -50,43 +50,43 @@ require_once 'assets/includes/header.php';
       <p class="lead text-muted hero-text">
         Explore destinations through real stories
       </p>
-      <!-- KARTA -->
+      <!-- Map -->
       <div class="map-container mt-4">
 
         <img src="https://uploads.onecompiler.io/442ssbwmc/44fzyrgz7/Jordglogen.png" class="globe" alt="Jordglob">
 
 
-        <!-- ASIA (klickbar - first pn) -->
+        <!-- Asia (clickable - first pin) -->
         <a href="feed.asia.php" class="pin">
           <img src="https://uploads.onecompiler.io/442ssbwmc/44fzyrgz7/Pin.png" alt="Pin">
           <div class="popup">ASIA</div>
         </a>
 
-        <!-- EUROPE (not clickable) -->
+        <!-- Europe -->
         <div class="pin2">
           <img src="https://uploads.onecompiler.io/442ssbwmc/44fzyrgz7/Pin.png" alt="Pin">
           <div class="popup">EUROPE</div>
         </div>
 
-        <!-- NORTH AMERICA -->
+        <!-- North America -->
         <div class="pin3">
           <img src="https://uploads.onecompiler.io/442ssbwmc/44fzyrgz7/Pin.png" alt="Pin">
           <div class="popup">NORTH AMERICA</div>
         </div>
 
-        <!-- SOUTH AMERICA -->
+        <!-- South America -->
         <div class="pin4">
           <img src="https://uploads.onecompiler.io/442ssbwmc/44fzyrgz7/Pin.png" alt="Pin">
           <div class="popup">SOUTH AMERICA</div>
         </div>
 
-        <!-- AFRICA -->
+        <!-- Africa -->
         <div class="pin5">
           <img src="https://uploads.onecompiler.io/442ssbwmc/44fzyrgz7/Pin.png" alt="Pin">
           <div class="popup">AFRICA</div>
         </div>
 
-        <!-- OCEANIA -->
+        <!-- Oceania -->
         <div class="pin6">
           <img src="https://uploads.onecompiler.io/442ssbwmc/44fzyrgz7/Pin.png" alt="Pin">
           <div class="popup">OCEANIA</div>
@@ -97,7 +97,7 @@ require_once 'assets/includes/header.php';
 
     </div>
 
-    <!-- POSTCARDS -->
+    <!-- Postcards -->
     <h2 class="mb-4 text-center">New postcards</h2>
     <div class="row g-4 px-4">
 

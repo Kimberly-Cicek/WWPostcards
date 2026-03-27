@@ -203,6 +203,6 @@ $postcards = $stmt->fetchAll();
             <div class="alert alert-info">There are no postcards from Asia yet.</div> <!-- Shows if there are no postcards from Asia -->
         <?php endif; ?>
     </div>
-    <main>
+</main>
 
-        <?php require_once 'assets/includes/footer.php'; ?>
+<?php require_once 'assets/includes/footer.php'; ?>
