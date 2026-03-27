@@ -32,7 +32,6 @@ You have left some fields empty!
     }
     ?>
     <!--Form for registration-->
-    <main>
     <section class="container d-flex justify-content-center p-5 mt-2 mb-5" id="regform">
         <div>
             <h2 class="mb-5 text-center">Hello new member!</h2>
