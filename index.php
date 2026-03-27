@@ -41,7 +41,7 @@ if (isset($_GET['action'])) {
 <div class="container py-4">
 
   <!-- HERO -->
-  <div class="hero mb-5 text-center">
+  <div class="hero text-center">
 
     <h1 class="display fw-bold">
       Discover the world, one postcard at a time
@@ -52,7 +52,7 @@ if (isset($_GET['action'])) {
     </p>
 
     <!-- KARTA -->
-    <div class="map-container mt-4">
+    <div class="map-container">
 
       <img src="https://uploads.onecompiler.io/442ssbwmc/44fzyrgz7/Jordglogen.png" class="globe" alt="Jordglob">
 
