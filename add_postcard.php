@@ -1,5 +1,7 @@
 <?php
+require_once 'assets/config/db.php';
 require_once 'assets/includes/header.php';
+require_once 'assets/functions/insert.php';
 ?>
 
 <main class="container my-5">
@@ -52,7 +54,7 @@ require_once 'assets/includes/header.php';
                     </div>
 
                     <div class="d-flex justify-content-end mt-4">
-                        <button type="submit" class="btn btn-custom px-4 py-2">
+                        <button type="submit" name="create_postcard" class="btn btn-custom px-4 py-2">
                             Send postcard
                         </button>
                     </div>
