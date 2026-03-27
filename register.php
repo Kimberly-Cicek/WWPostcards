@@ -49,6 +49,7 @@ You have left some fields empty!
                 <div class="text-center">
                     <button type="submit" class="btn rounded-pill p-2 px-4 mt-4" name="register">Register! <i class="fa-solid fa-circle-plus"></i></button>
                 </div>
+                <!-- Alternative ways to log in -->
                 <div class="text-center">
                     <p class="text-muted divider-top mt-3">or log in with</p>
                     <div>
