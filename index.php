@@ -50,7 +50,6 @@ require_once 'assets/includes/header.php';
       <p class="lead text-muted hero-text">
         Explore destinations through real stories
       </p>
-
       <!-- KARTA -->
       <div class="map-container mt-4">
 
@@ -94,12 +93,13 @@ require_once 'assets/includes/header.php';
         </div>
 
       </div>
+      </div>
 
     </div>
 
     <!-- POSTCARDS -->
-    <h4 class="mb-4">New postcards</h4>
-    <div class="row g-4">
+    <h2 class="mb-4 text-center">New postcards</h2>
+    <div class="row g-4 px-4">
 
       <!-- 1 -->
       <div class="col-12 col-lg-6 d-flex">
