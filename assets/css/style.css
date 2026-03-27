@@ -497,7 +497,17 @@ header {
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
 }
 
+/* Redigera och Radera knapp */
 
+.btn-custom-edit {
+  color: #3a8fb7;
+  border: 1px solid #3a8fb7;
+}
+
+.btn-custom-edit:hover {
+  background-color: #3a8fb7;
+  color: white;
+}
 /* Footer */
 footer {
   background-color: #f3e8d2;

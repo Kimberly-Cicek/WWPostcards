@@ -119,6 +119,18 @@ $postcards = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                     <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                                 </form>
                             </div>
+
+
+                        </div>
+
+                        <div class="postcard-footer">
+                            <a href="edit.php?id=<?= $row['id']; ?>" class="btn btn-custom-edit btn-sm">Redigera</a>
+                            <form action="assets/functions/delete.php" method="post" class="m-0">
+                                <input type="hidden" name="id" value="<?= $row['id']; ?>">
+                                
+                            <button type="submit" class="btn btn-custom btn-sm">Radera</button>
+                            </form>
+
                         </div>
                     </div>
                 <?php endforeach; ?>
