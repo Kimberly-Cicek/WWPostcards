@@ -86,6 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 ?>
+<main>
 
 <div class="container py-5">
     <h1 class="mb-4">Redigera vykort</h1>
@@ -166,6 +167,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     </div>
 </div>
+</main>
 
 <?php
 require_once 'assets/includes/footer.php';

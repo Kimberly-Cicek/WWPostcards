@@ -31,7 +31,7 @@ $stmt = $dbh->prepare("SELECT * FROM postcard WHERE continent = :continent ORDER
 $stmt->execute(['continent' => $continent]);
 $postcards = $stmt->fetchAll();
 ?>
-
+<main>
 <div class="container mb-4">
     <div class="filter-box p-4 rounded-4 shadow-sm">
         <form class="row g-3">
@@ -168,5 +168,6 @@ $postcards = $stmt->fetchAll();
         <div class="alert alert-info">Det finns inga vykort från Asien ännu.</div>
     <?php endif; ?>
 </div>
+</main>
 
 <?php require_once 'assets/includes/footer.php'; ?>

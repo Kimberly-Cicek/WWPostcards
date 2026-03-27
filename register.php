@@ -32,7 +32,8 @@ You have left some fields empty!
     }
     ?>
     <!--Formulär för registering-->
-    <section class="container d-flex justify-content-center p-5 my-5" id="regform">
+    <main>
+    <section class="container d-flex justify-content-center p-5 mt-2 mb-5" id="regform">
         <div>
             <h2 class="mb-5 text-center">Hello new member!</h2>
             <p>Fill in your email and password to register.</p>

@@ -36,7 +36,8 @@ require_once 'assets/functions/photo.resize.php';
 </head>
 
 <body>
-    <header class="mb-5">
+    <div class="page-container">
+    <header class="mb-2">
         <div class="container">
             <nav class="navbar navbar-expand-md">
                 <a href="index.htm" class="navbar-brand">
