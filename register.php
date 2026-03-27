@@ -4,7 +4,7 @@ require_once 'assets/config/db.php';
 require_once 'assets/functions/register-user.php';
 ?>
 <main>
-    <!--Alert för lyckad registrering-->
+    <!--Alert for succesful registration -->
     <?php
     // Checks if an action is set
     if (isset($_GET['action'])) {
@@ -31,7 +31,7 @@ You have left some fields empty!
         }
     }
     ?>
-    <!--Formulär för registering-->
+    <!--Form for registration-->
     <main>
     <section class="container d-flex justify-content-center p-5 mt-2 mb-5" id="regform">
         <div>

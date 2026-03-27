@@ -16,7 +16,7 @@ if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
 $user_id = $_SESSION['user_id'];
 $postcard_id = (int) $_GET['id'];
 
-/* Hämta vykortet och kontrollera att det tillhör användaren */
+/* Get postcard and verifies that it belongs to user */
 $sql = "SELECT id, title, message, image_path, continent, country, city, created_at
         FROM postcard
         WHERE id = :id AND user_id = :user_id";
@@ -35,7 +35,7 @@ if (!$postcard) {
 
 $error = '';
 
-/* Spara ändringar */
+/* Save changes */
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $title = trim($_POST['title'] ?? '');
     $message = trim($_POST['message'] ?? '');
@@ -75,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    /* Uppdatera visade värden i formuläret om validering misslyckas */
+    /* Update shows values if validation fails */
     $postcard['title'] = $title;
     $postcard['message'] = $message;
     $postcard['continent'] = $continent;
