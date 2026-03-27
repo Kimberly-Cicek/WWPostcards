@@ -4,9 +4,7 @@ require_once 'assets/config/db.php';
 
 $continent = 'Asien';
 
-/* =========================
-   SAVE COMMENT
-========================= */
+/* Save comment */
 if (isset($_POST['comment'], $_POST['postcard_id']) && isset($_SESSION['user_id'])) {
     $stmt = $dbh->prepare("INSERT INTO comments (postcard_id, user_id, text) VALUES (?, ?, ?)");
     $stmt->execute([
@@ -16,9 +14,7 @@ if (isset($_POST['comment'], $_POST['postcard_id']) && isset($_SESSION['user_id'
     ]);
 }
 
-/* 
-   DELETE COMMENT
-*/
+/* Delete comment */
 if (isset($_POST['delete_id']) && isset($_SESSION['user_id'])) {
     $stmt = $dbh->prepare("DELETE FROM comments WHERE id = ? AND user_id = ?");
     $stmt->execute([
@@ -27,17 +23,13 @@ if (isset($_POST['delete_id']) && isset($_SESSION['user_id'])) {
     ]);
 }
 
-/* 
-   GET POSTCARD
- */
+/* Get postcard */
 $stmt = $dbh->prepare("SELECT * FROM postcard WHERE continent = :continent ORDER BY created_at DESC");
 $stmt->execute(['continent' => $continent]);
 $postcards = $stmt->fetchAll();
 ?>
 
-<!-- 
-     FILTER
- -->
+<!--  Filter -->
 <main>
     <div class="container mt-4 mb-4">
         <div class="filter-box p-4 rounded-4 shadow-sm">
@@ -81,9 +73,7 @@ $postcards = $stmt->fetchAll();
         </div>
     </div>
 
-    <!-- 
-     POSTCORD
- -->
+    <!--  Postcard feed -->
     <div class="container py-5">
         <h1 class="h2 mb-4 text-center">Postcards from Asia</h1>
 
@@ -92,7 +82,7 @@ $postcards = $stmt->fetchAll();
                 <?php foreach ($postcards as $row): ?>
                     <div class="col-12 col-lg-6 d-flex">
 
-                        <!-- POSTCARDS -->
+                        <!-- Postcards -->
                         <div class="postcard-card shadow-sm w-100">
                             <div class="row g-0 h-100">
 
@@ -133,7 +123,7 @@ $postcards = $stmt->fetchAll();
 
                             </div>
 
-                            <!-- BUTTON -->
+                            <!-- Button for comments -->
                             <div class="p-3">
                                 <button class="btn btn-primary btn-sm w-100"
                                     data-bs-toggle="modal"
@@ -155,7 +145,7 @@ $postcards = $stmt->fetchAll();
 
                                 <div class="modal-body">
 
-                                    <!-- FORM -->
+                                    <!-- Form -->
                                     <form method="post" class="mb-3">
                                         <input type="hidden" name="postcard_id" value="<?= $row['id'] ?>"> <!-- Sends the cards id as parameter to know which comment belongs to which user -->
 
@@ -169,7 +159,7 @@ $postcards = $stmt->fetchAll();
                                         <?php endif; ?> <!-- Checks whether user is logged in-->
                                     </form>
 
-                                    <!-- COMMENTS (connection to database) -->
+                                    <!-- Comments (connection to database) -->
                                     <?php
                                     $stmt = $dbh->prepare("SELECT * FROM comments WHERE postcard_id = ?"); /* Get all comments with the same postcard_id as the current postcard */
                                     $stmt->execute([$row['id']]);
