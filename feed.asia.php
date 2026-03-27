@@ -84,7 +84,7 @@ $postcards = $stmt->fetchAll();
      POSTCORD
  -->
 <div class="container py-5">
-    <h1 class="h2 mb-4">Postcards from Asia</h1>
+    <h1 class="h2 mb-4 text-center">Postcards from Asia</h1>
 
     <?php if ($postcards): ?>
         <div class="row g-4">
