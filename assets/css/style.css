@@ -195,7 +195,8 @@ a {
 /* Map container */
 .map-container {
   position: relative;
-  display: inline-block;
+  margin: 0 auto;
+  width: fit-content;
 }
 
 /* ===== PINS ===== */
@@ -261,6 +262,10 @@ a {
 .pin5:hover img,
 .pin6:hover img {
   transform: scale(1.2);
+}
+
+h2 {
+  font-size: 1.5rem;
 }
 
 /* ===== POPUP ===== */
