@@ -497,6 +497,25 @@ header {
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
 }
 
+/* Edit */
+.btn-primary {
+  background-color: #3a8fb7;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #1f4e5f;
+}
+
+/* Delete */
+.btn-danger {
+  background-color: #ff7f6a;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #ffaca0;
+}
 
 /* Footer */
 footer {

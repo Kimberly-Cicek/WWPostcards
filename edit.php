@@ -86,23 +86,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 ?>
 <?php require_once 'assets/includes/header.php'; ?>
-<main>
+<main class="container my-5">
 
-<div class="container py-5">
-    <h1 class="mb-4">Redigera vykort</h1>
+    <h1 class="mb-4 text-center">Edit postcard</h1>
 
     <?php if (!empty($error)): ?>
-        <div class="alert alert-danger">
-            <?= htmlspecialchars($error) ?>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8 col-xl-7">
+                <div class="alert alert-danger">
+                    <?= htmlspecialchars($error) ?>
+                </div>
+            </div>
         </div>
     <?php endif; ?>
 
-    <div class="row">
-        <div class="col-12 col-lg-8">
-            <div class="card shadow-sm p-4">
-                <form method="post" action="">
-                    <div class="mb-3">
-                        <label for="title" class="form-label">Titel</label>
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8 col-xl-7">
+            <div class="postcard-box shadow-sm rounded-4 p-4 p-md-5">
+                <form method="post">
+                    <div class="mb-4">
+                        <label for="title" class="form-label fw-semibold">Title</label>
                         <input
                             type="text"
                             class="form-control"
@@ -111,8 +114,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             value="<?= htmlspecialchars($postcard['title'] ?? '') ?>">
                     </div>
 
-                    <div class="mb-3">
-                        <label for="message" class="form-label">Meddelande</label>
+                    <div class="mb-4">
+                        <label for="message" class="form-label fw-semibold">Message</label>
                         <textarea
                             class="form-control"
                             id="message"
@@ -120,8 +123,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             rows="6"><?= htmlspecialchars($postcard['message'] ?? '') ?></textarea>
                     </div>
 
-                    <div class="mb-3">
-                        <label for="continent" class="form-label">Kontinent</label>
+                    <div class="mb-4">
+                        <label for="continent" class="form-label fw-semibold">Continent</label>
                         <input
                             type="text"
                             class="form-control"
@@ -130,8 +133,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             value="<?= htmlspecialchars($postcard['continent'] ?? '') ?>">
                     </div>
 
-                    <div class="mb-3">
-                        <label for="country" class="form-label">Land</label>
+                    <div class="mb-4">
+                        <label for="country" class="form-label fw-semibold">Country</label>
                         <input
                             type="text"
                             class="form-control"
@@ -140,8 +143,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             value="<?= htmlspecialchars($postcard['country'] ?? '') ?>">
                     </div>
 
-                    <div class="mb-3">
-                        <label for="city" class="form-label">Stad</label>
+                    <div class="mb-4">
+                        <label for="city" class="form-label fw-semibold">City</label>
                         <input
                             type="text"
                             class="form-control"
@@ -150,23 +153,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             value="<?= htmlspecialchars($postcard['city'] ?? '') ?>">
                     </div>
 
-                    <div class="mb-3">
-                        <p class="mb-2"><strong>Nuvarande bild:</strong></p>
+                    <div class="mb-4 text-center">
+                        <p class="mb-2 fw-semibold">Current picture:</p>
                         <img
                             src="<?= htmlspecialchars($postcard['image_path'] ?? '') ?>"
                             alt="<?= htmlspecialchars($postcard['title'] ?? '') ?>"
+                            class="img-fluid rounded"
                             style="max-width: 250px; height: auto;">
                     </div>
 
-                    <div class="d-flex gap-2">
-                        <button type="submit" class="btn btn-primary">Spara ändringar</button>
-                        <a href="my_page.php" class="btn btn-secondary">Avbryt</a>
+                    <div class="d-flex justify-content-center gap-3 mt-4">
+                        <button type="submit" class="btn btn-primary px-4 py-2">Save changes</button>
+                        <a href="my_page.php" class="btn btn-danger px-4 py-2">Cancel</a>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-</div>
 </main>
 
 <?php

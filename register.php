@@ -1,7 +1,7 @@
 <?php
-require_once 'assets/includes/header.php';
-require_once 'assets/config/db.php';            
+require_once 'assets/config/db.php'; 
 require_once 'assets/functions/register-user.php';
+require_once 'assets/includes/header.php';
 ?>
 <main>
     <!--Alert for succesful registration -->
@@ -32,7 +32,6 @@ You have left some fields empty!
     }
     ?>
     <!--Form for registration-->
-    <main>
     <section class="container d-flex justify-content-center p-5 mt-2 mb-5" id="regform">
         <div>
             <h2 class="mb-5 text-center">Hello new member!</h2>
@@ -50,6 +49,7 @@ You have left some fields empty!
                 <div class="text-center">
                     <button type="submit" class="btn rounded-pill p-2 px-4 mt-4" name="register">Register! <i class="fa-solid fa-circle-plus"></i></button>
                 </div>
+                <!-- Alternative ways to log in -->
                 <div class="text-center">
                     <p class="text-muted divider-top mt-3">or log in with</p>
                     <div>
