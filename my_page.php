@@ -2,13 +2,14 @@
 require_once 'assets/includes/header.php';
 require_once 'assets/config/db.php';
 
-
+/* Checks if user is logged in */
 if (!isset($_SESSION['user_id'])) {
     die('Du måste vara inloggad.');
 }
-
+/* Current logged-in user */
 $user_id = $_SESSION['user_id'];
 
+/* Fetch all postcards created by this user */
 $sql = "SELECT id, title, message, image_path, continent, country, city, created_at
         FROM postcard
         WHERE user_id = :user_id
@@ -19,6 +20,7 @@ $stmt->execute([
     ':user_id' => $user_id
 ]);
 
+/* Fetch results as associative array */
 $postcards = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 <main>
@@ -69,7 +71,7 @@ $postcards = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 </div>
 
                 <div class="col-auto">
-                    <button type="button" class="btn filter-btn">Filter</button>
+                    <button type="button" class="btn filter-btn">Filter</button> <!-- Fake -->
                 </div>
             </form>
         </div>
@@ -81,7 +83,7 @@ $postcards = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>
 
         <?php if (empty($postcards)): ?>
-            <p>You have not posted any postcards.</p>
+            <p>You have not posted any postcards.</p> <!-- Checks if user has any postcards -->
         <?php else: ?>
             <div class="row g-4">
                 <?php foreach ($postcards as $row): ?>
@@ -113,7 +115,7 @@ $postcards = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                         </p>
 
                                         <div class="postcard-message">
-                                            <?= nl2br(htmlspecialchars($row['message'] ?? '')) ?>
+                                            <?= nl2br(htmlspecialchars($row['message'] ?? '')) ?> <!-- Keeps line breaks -->
                                         </div>
 
                                         <p class="postcard-date">
@@ -128,7 +130,7 @@ $postcards = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 <a href="edit.php?id=<?= $row['id']; ?>" class="btn btn-primary btn-sm">Edit</a>
 
                                 <form action="assets/functions/delete.php" method="post" class="m-0">
-                                    <input type="hidden" name="id" value="<?= $row['id']; ?>">
+                                    <input type="hidden" name="id" value="<?= $row['id']; ?>"> <!-- Sends postcard id -->
                                     <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                                 </form>
                             </div>
