@@ -41,9 +41,7 @@ require_once 'assets/functions/photo.resize.php';
             <div class="container">
                 <nav class="navbar navbar-expand-md">
                     <a href="index.htm" class="navbar-brand">
-
                     </a>
-
                     <a href="index.php">
                         <img src="images/postcardlogga.png" alt="Logo" width="150" class="mb-3">
                     </a>

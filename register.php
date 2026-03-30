@@ -1,5 +1,5 @@
 <?php
-require_once 'assets/config/db.php'; 
+require_once 'assets/config/db.php';
 require_once 'assets/functions/register-user.php';
 require_once 'assets/includes/header.php';
 ?>
@@ -19,7 +19,7 @@ Your registration worked!
 </div>
 ';
                 break;
-
+            //Alert for empty fields
             case 'empty':
                 echo '
           <div class="container d-flex justify-content-center mt-3">

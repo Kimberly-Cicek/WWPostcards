@@ -93,146 +93,146 @@ require_once 'assets/includes/header.php';
         </div>
 
       </div>
-      </div>
-
     </div>
 
-    <!-- Postcards -->
-    <h2 class="mb-4 text-center">New postcards</h2>
-    <div class="row g-4 px-4">
+  </div>
 
-      <!-- 1 -->
-      <div class="col-12 col-lg-6 d-flex">
-        <div class="postcard-card shadow-sm w-100">
-          <div class="row g-0 h-100">
-            <div class="col-md-6">
-              <div class="postcard-image-wrap">
-                <img src="images/Baliberg.jpg" class="postcard-image" alt="Indonesien">
+  <!-- Postcards -->
+  <h2 class="mb-4 text-center">New postcards</h2>
+  <div class="row g-4 px-4">
 
-              </div>
+    <!-- 1 -->
+    <div class="col-12 col-lg-6 d-flex">
+      <div class="postcard-card shadow-sm w-100">
+        <div class="row g-0 h-100">
+          <div class="col-md-6">
+            <div class="postcard-image-wrap">
+              <img src="images/Baliberg.jpg" class="postcard-image" alt="Indonesien">
+
             </div>
-
-            <div class="col-md-6">
-              <div class="postcard-back">
-                <div class="stamp-box">
-                  <i class="fa-solid fa-location-dot fa-2x" style="color:#ff5733;"></i>
-                </div>
-
-                <h2 class="postcard-title">Trip of a life in Indonesia</h2>
-                <p class="postcard-location">Bali, Indonesia</p>
-
-                <div class="postcard-message">
-                  My favorite spots in Bali.
-                </div>
-
-                <p class="postcard-date">Published: 2026-03-17</p>
-              </div>
-            </div>
-
           </div>
+
+          <div class="col-md-6">
+            <div class="postcard-back">
+              <div class="stamp-box">
+                <i class="fa-solid fa-location-dot fa-2x" style="color:#ff5733;"></i>
+              </div>
+
+              <h2 class="postcard-title">Trip of a life in Indonesia</h2>
+              <p class="postcard-location">Bali, Indonesia</p>
+
+              <div class="postcard-message">
+                My favorite spots in Bali.
+              </div>
+
+              <p class="postcard-date">Published: 2026-03-17</p>
+            </div>
+          </div>
+
         </div>
       </div>
-
-      <!-- 2 -->
-      <div class="col-12 col-lg-6 d-flex">
-        <div class="postcard-card shadow-sm w-100">
-          <div class="row g-0 h-100">
-
-            <div class="col-md-6"> 
-              <div class="postcard-image-wrap"> 
-                <img src="images/Parisbild.jpg" class="postcard-image" alt="Paris">
-
-              </div>
-            </div>
-
-            <div class="col-md-6">
-              <div class="postcard-back">
-                <div class="stamp-box">
-                  <i class="fa-solid fa-location-dot fa-2x" style="color:#ff5733;"></i>
-                </div>
-
-                <h2 class="postcard-title">My gab year in Paris</h2>
-                <p class="postcard-location">Paris, France</p>
-
-                <div class="postcard-message">
-                  Golden spots in Paris
-                </div>
-
-                <p class="postcard-date">Published: 2026-03-17</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <!-- 3 -->
-      <div class="col-12 col-lg-6 d-flex">
-        <div class="postcard-card shadow-sm w-100">
-          <div class="row g-0 h-100">
-
-            <div class="col-md-6">
-              <div class="postcard-image-wrap">
-                <img src="images/Sydamerika.jpg" class="postcard-image" alt="sydamerika">
-
-              </div>
-            </div>
-
-            <div class="col-md-6">
-              <div class="postcard-back">
-                <div class="stamp-box">
-                  <i class="fa-solid fa-location-dot fa-2x" style="color:#ff5733;"></i>
-                </div>
-
-                <h2 class="postcard-title">Back packing in South America</h2>
-                <p class="postcard-location">Brazil</p>
-
-                <div class="postcard-message">
-                  Tips on hikes in South America.
-                </div>
-
-                <p class="postcard-date">Published: 2026-03-17</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
-      <!-- 4 -->
-      <div class="col-12 col-lg-6 d-flex">
-        <div class="postcard-card shadow-sm w-100">
-          <div class="row g-0 h-100">
-
-            <div class="col-md-6">
-              <div class="postcard-image-wrap">
-                <img src="images/USAroadtrip.jpg" class="postcard-image" alt="USA">
-
-              </div>
-            </div>
-
-            <div class="col-md-6">
-              <div class="postcard-back">
-                <div class="stamp-box">
-                  <i class="fa-solid fa-location-dot fa-2x" style="color:#ff5733;"></i>
-                </div>
-
-                <h2 class="postcard-title">Roadtrip in the US</h2>
-                <p class="postcard-location">US</p>
-
-                <div class="postcard-message">
-                  My best stops along the road.
-                </div>
-
-                <p class="postcard-date">Published: 2026-03-17</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
     </div>
+
+    <!-- 2 -->
+    <div class="col-12 col-lg-6 d-flex">
+      <div class="postcard-card shadow-sm w-100">
+        <div class="row g-0 h-100">
+
+          <div class="col-md-6">
+            <div class="postcard-image-wrap">
+              <img src="images/Parisbild.jpg" class="postcard-image" alt="Paris">
+
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="postcard-back">
+              <div class="stamp-box">
+                <i class="fa-solid fa-location-dot fa-2x" style="color:#ff5733;"></i>
+              </div>
+
+              <h2 class="postcard-title">My gab year in Paris</h2>
+              <p class="postcard-location">Paris, France</p>
+
+              <div class="postcard-message">
+                Golden spots in Paris
+              </div>
+
+              <p class="postcard-date">Published: 2026-03-17</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="col-12 col-lg-6 d-flex">
+      <div class="postcard-card shadow-sm w-100">
+        <div class="row g-0 h-100">
+
+          <div class="col-md-6">
+            <div class="postcard-image-wrap">
+              <img src="images/Sydamerika.jpg" class="postcard-image" alt="sydamerika">
+
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="postcard-back">
+              <div class="stamp-box">
+                <i class="fa-solid fa-location-dot fa-2x" style="color:#ff5733;"></i>
+              </div>
+
+              <h2 class="postcard-title">Back packing in South America</h2>
+              <p class="postcard-location">Brazil</p>
+
+              <div class="postcard-message">
+                Tips on hikes in South America.
+              </div>
+
+              <p class="postcard-date">Published: 2026-03-17</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="col-12 col-lg-6 d-flex">
+      <div class="postcard-card shadow-sm w-100">
+        <div class="row g-0 h-100">
+
+          <div class="col-md-6">
+            <div class="postcard-image-wrap">
+              <img src="images/USAroadtrip.jpg" class="postcard-image" alt="USA">
+
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="postcard-back">
+              <div class="stamp-box">
+                <i class="fa-solid fa-location-dot fa-2x" style="color:#ff5733;"></i>
+              </div>
+
+              <h2 class="postcard-title">Roadtrip in the US</h2>
+              <p class="postcard-location">US</p>
+
+              <div class="postcard-message">
+                My best stops along the road.
+              </div>
+
+              <p class="postcard-date">Published: 2026-03-17</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
 </main>
 <?php
 require_once 'assets/includes/footer.php';
