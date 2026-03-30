@@ -1,18 +1,18 @@
 <?php
-
+/* Start session to access logged-in user data */
 session_start();
+/* Include database connection */
 require_once 'assets/config/db.php';
 
-
-
+/* Check if user is logged in */
 if (!isset($_SESSION['user_id'])) {
     die('Du måste vara inloggad.');
 }
-
+/* Validate that an ID is provided and is a number */
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
     die('Ogiltigt vykorts-id.');
 }
-
+/* Store user ID and postcard ID */
 $user_id = $_SESSION['user_id'];
 $postcard_id = (int) $_GET['id'];
 
@@ -26,9 +26,10 @@ $stmt->execute([
     ':id' => $postcard_id,
     ':user_id' => $user_id
 ]);
-
+// Fetch postcard data
 $postcard = $stmt->fetch(PDO::FETCH_ASSOC);
 
+// If no postcard is found or doesn't belong to user
 if (!$postcard) {
     die('Vykortet finns inte eller tillhör inte dig.');
 }
@@ -42,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $continent = trim($_POST['continent'] ?? '');
     $country = trim($_POST['country'] ?? '');
     $city = trim($_POST['city'] ?? '');
-
+    // Check that all fields are filled
     if (
         empty($title) ||
         empty($message) ||
@@ -52,6 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     ) {
         $error = 'Alla fält måste fyllas i.';
     } else {
+        // Update postcard in database
         $sql = "UPDATE postcard
                 SET title = :title,
                     message = :message,
@@ -70,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             ':id' => $postcard_id,
             ':user_id' => $user_id
         ]);
-
+        // Redirect after successful update
         header('Location: my_page.php');
         exit;
     }
@@ -89,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <main class="container my-5">
 
     <h1 class="mb-4 text-center">Edit postcard</h1>
-
+    <!-- Show error message if something went wrong -->
     <?php if (!empty($error)): ?>
         <div class="row justify-content-center">
             <div class="col-12 col-md-10 col-lg-8 col-xl-7">
@@ -99,7 +101,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         </div>
     <?php endif; ?>
-
+    <!-- Form for editing postcard -->
     <div class="row justify-content-center">
         <div class="col-12 col-md-10 col-lg-8 col-xl-7">
             <div class="postcard-box shadow-sm rounded-4 p-4 p-md-5">
@@ -172,6 +174,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 </main>
 
+// Include footer
 <?php
 require_once 'assets/includes/footer.php';
 ?>
