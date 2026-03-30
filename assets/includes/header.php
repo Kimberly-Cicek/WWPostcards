@@ -57,7 +57,7 @@ require_once 'assets/functions/photo.resize.php';
                     <li class="nav-item"><a href="feed.asia.php" class="nav-link">Discover postcards</a></li>
                     <li class="nav-item"><a href="#" class="nav-link">My friends</a></li>
                         <li class="nav-item">
-                    <a href="add_postcard.php" class="nav-link">Create postcard</a>
+                    <a href="add_postcard.php" class="nav-link">Create postcard <i class="fa-solid fa-pen"></i></a>
                     </li>';
                         } else { //Header for logged out user
                             echo '
@@ -116,7 +116,7 @@ require_once 'assets/functions/photo.resize.php';
             if (isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])) {
                 echo '
         <a href="add_postcard.php" class="floating-upload-btn cr-postcard-btn">
-            <i class="fa-solid fa-plus"></i> Create postcard
+            Create postcard  <i class="fa-solid fa-pen ms-1"></i>
         </a>';
             }
             ?>
